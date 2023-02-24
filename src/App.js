@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css';
 
 // Import Component
 import Home from "./component/Home";
@@ -13,5 +12,4 @@ function App() {
     </React.StrictMode>
   );
 }
-
 export default App;

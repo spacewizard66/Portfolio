@@ -9,7 +9,7 @@ const projects = {
         "image": "/img/passwordgenerator.gif",
         "title": "Password Generator",
         "description": "Generates a unique and complex password using JavaScript / CSS",
-        "url": "https://github.com/spacewizard66/Password-Generator"
+        "url": "https://password-generator-vti7.onrender.com"
     },
     "project3": {
         "image": "/img/alien-invasion.gif",
@@ -30,5 +30,4 @@ const projects = {
         "url": "https://github.com/spacewizard66/TicTacToe"
     }
 };
-
 export default projects;

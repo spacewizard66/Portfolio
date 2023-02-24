@@ -11,7 +11,6 @@ function Footer() {
                     <a className="social-link linkedin" href="https://www.linkedin.com/in/mason-galat/" target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
                     <a className="social-link github" href="https://github.com/spacewizard66" target="_blank" rel="noreferrer"><span>Github</span></a>
                 </div>
-                
                 <div className="copyright-div">
                     <p className="copyright">&copy; {currYear}, Made with ❤️ by Mason Galat.</p>
                 </div>
@@ -19,7 +18,4 @@ function Footer() {
         </React.StrictMode>
     )
 }
-
-
-
 export default Footer;

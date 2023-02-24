@@ -5,7 +5,7 @@ import Projects from "../projects.js"
 function Home() {
 
     let projects = Projects;
-    let final = []
+    let final = [];
 
     for (let project in projects) {
         final.push(
@@ -22,11 +22,9 @@ function Home() {
         );
     }
 
-
     return (
             <div>
                 <div className="nav-list">
-                    
                     <div className="nav-item">
                         <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">
                             <p className="nav-links-title">Resume</p>
@@ -57,6 +55,4 @@ function Home() {
             </div>
     );
 }
-
-
 export default Home;
