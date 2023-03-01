@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Projects from "../projects.js"
+import Projects from '../projects.js';
 
 function Home() {
 

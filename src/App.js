@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 // Import Component
-import Home from "./component/Home";
-import Footer from "./component/Footer";
+import Home from './component/Home';
+import Footer from './component/Footer';
 
 function App() {
   return (
