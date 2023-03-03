@@ -3,7 +3,7 @@ const projects = {
         "image": "/img/weatherapp.gif",
         "title": "Weather App",
         "description": "A weather forecast application built with React, OpenWeather's API, & responsive CSS",
-        "url": "https://spacewizard66.github.io/React-Weather-App/"
+        "url": "https://weather-forecast-0ce3.onrender.com/"
     },
     "project2": {
         "image": "/img/passwordgenerator.gif",
