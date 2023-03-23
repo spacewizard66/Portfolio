@@ -59,25 +59,7 @@ function Home() {
         );
         index++;
     }
-/*     
-    useEffect(() => {
-        for ( let i=0; i<5; i++ ) {
-            console.log('project: ', allProjects[i]);
-            console.log('project classname: ', allProjects[i].props.className);
-            console.log('ref: ', allProjects[i].ref);
-        }
-    }, [allProjects])
- */
-/* 
-    useEffect(() => {
-        console.log('project1 in view: ', project1);
-        console.log('project2 in view: ', project2);
-        console.log('project3 in view: ', project3);
-        console.log('project4 in view: ', project4);
-        console.log('project5 in view: ', project5);
-        console.log()
-    }, [inViewValues])
- */
+
     return (
             <div>
                 <div className="nav-list">
