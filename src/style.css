@@ -138,6 +138,7 @@ body {
     color: #141c3a;
     border-radius: 0.8rem;
     margin: 0 auto;
+    opacity: 0;
 }
 /* Image (GIF) */
 .project-img {
@@ -188,6 +189,37 @@ body {
     margin-top: 5px;
     border-bottom-width: 0px;
 }
+.project-animate {
+    animation-name: fadeIn;
+    animation-duration: 800ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+/* ANIMATION FOR OPENING TRANSITIONS */
+/* Fading entrances  */
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
 
 
 /*===========================================================================*/

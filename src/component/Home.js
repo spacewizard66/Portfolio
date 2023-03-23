@@ -1,15 +1,52 @@
 import React from 'react';
-
+import { useInView } from 'react-intersection-observer';
 import Projects from '../projects.js';
+import '../style.css';
 
 function Home() {
+    // Brings viewport back to top of page on unload (refresh)
+    //  to help animation effects
+    window.onunload = function () {
+        window.scrollTo(0, 0);
+    }
 
-    let projects = Projects;
-    let final = [];
+    // Declaring options for useInView() hook
+    const options = {
+        triggerOnce: true,
+        threshold: 0.2,
+    }
 
+    // useInView hooks for each project that returns
+    //  a boolean (true, false) of ref if in viewport.
+    // Accomplishes animation logic for projects.
+    const [ project1Ref, project1 ] = useInView(options);
+    const [ project2Ref, project2 ] = useInView(options);
+    const [ project3Ref, project3 ] = useInView(options);
+    const [ project4Ref, project4 ] = useInView(options);
+    const [ project5Ref, project5 ] = useInView(options);
+
+    // Assigning imported document to variable
+    const projects = Projects;
+
+    // Array to store all projects during loop
+    // then total array gets rendered
+    const allProjects = [];
+
+    // Array of ref variables for projects
+    const refs = [project1Ref, project2Ref, project3Ref, project4Ref, project5Ref];
+
+    // Array of inView boolean values for projects
+    const inViewValues = [project1, project2, project3, project4, project5];
+
+    // Initialize index for looping through arrays
+    let index = 0;
+
+    // Loop for loading each project info from
+    // projects.js, and pushes each project to the
+    // allProjects array to be rendered when complete
     for (let project in projects) {
-        final.push(
-            <div className="project" key={project}>
+        allProjects.push(
+            <div ref={refs[index]} className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`} key={project}>
                 <img className="project-img" key={`${project}-image`} src={`${projects[project].image}`} alt="displaying each project"></img>
                 <div className="project-details" key={`${project}-details`}>
                     <p className="project-title" key={`${project}-title`}>{projects[project].title}</p>
@@ -20,8 +57,27 @@ function Home() {
                 </div>
             </div>
         );
+        index++;
     }
-
+/*     
+    useEffect(() => {
+        for ( let i=0; i<5; i++ ) {
+            console.log('project: ', allProjects[i]);
+            console.log('project classname: ', allProjects[i].props.className);
+            console.log('ref: ', allProjects[i].ref);
+        }
+    }, [allProjects])
+ */
+/* 
+    useEffect(() => {
+        console.log('project1 in view: ', project1);
+        console.log('project2 in view: ', project2);
+        console.log('project3 in view: ', project3);
+        console.log('project4 in view: ', project4);
+        console.log('project5 in view: ', project5);
+        console.log()
+    }, [inViewValues])
+ */
     return (
             <div>
                 <div className="nav-list">
@@ -31,7 +87,7 @@ function Home() {
                         </a>
                     </div>
                 </div>
-
+                
                 <div className="home-description-div">
                     <p className="home-title">Frontend Developer</p>
                     <p className="home-skills">JavaScript / React / Python / Django / HTML / CSS / Git</p>
@@ -50,7 +106,7 @@ function Home() {
                 </div>
 
                 <div className="project-section">
-                    {final}
+                    {allProjects}
                 </div>
             </div>
     );

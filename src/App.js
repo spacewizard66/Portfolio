@@ -1,6 +1,5 @@
 import React from 'react';
-
-// Import Component
+// Import Components
 import Home from './component/Home';
 import Footer from './component/Footer';
 
