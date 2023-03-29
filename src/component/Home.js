@@ -13,7 +13,7 @@ function Home() {
     // Declaring options for useInView() hook
     const options = {
         triggerOnce: true,
-        threshold: 0.2,
+        threshold: 0.1,
     }
 
     // useInView hooks for each project that returns
@@ -59,25 +59,7 @@ function Home() {
         );
         index++;
     }
-/*     
-    useEffect(() => {
-        for ( let i=0; i<5; i++ ) {
-            console.log('project: ', allProjects[i]);
-            console.log('project classname: ', allProjects[i].props.className);
-            console.log('ref: ', allProjects[i].ref);
-        }
-    }, [allProjects])
- */
-/* 
-    useEffect(() => {
-        console.log('project1 in view: ', project1);
-        console.log('project2 in view: ', project2);
-        console.log('project3 in view: ', project3);
-        console.log('project4 in view: ', project4);
-        console.log('project5 in view: ', project5);
-        console.log()
-    }, [inViewValues])
- */
+
     return (
             <div>
                 <div className="nav-list">
@@ -93,8 +75,7 @@ function Home() {
                     <p className="home-skills">JavaScript / React / Python / Django / HTML / CSS / Git</p>
                     <p className="home-name">Hi, I'm Mason.</p>
                     <p className="home-description">
-                        A motivated web developer from Pennsylvania, USA, 
-                        aspiring to become an expert computer geek.
+                        A motivated web developer from Pennsylvania, USA.
                         I absolutely love to learn new technologies, and use it in my everyday life.
                         Every problem out there is worth solving!
                         In my freetime, I enjoy admiring art, music, and skateboarding with friends.

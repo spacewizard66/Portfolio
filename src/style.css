@@ -12,7 +12,14 @@
 
 body {
     margin: 0;
-    background: #6e07f3;
+    /* background: #6e07f3; */
+    /* background: #27009b; */
+    /* background: #273353; */
+    /* background: #303655; */
+    /* background: #004cff; */
+    /* background: #00337C; */ /* Navy and Green Palette */
+    background: #000; /* Black and Red Palette */
+
     background-attachment: fixed;
     background-repeat: repeat;
 }
@@ -33,32 +40,34 @@ body {
 .nav-item {
     height: 50px;
     width: 150px;
+    margin: 20px 0 0 20px;
     float: left;
-    border: solid 2px #ffab00;
-    background-color: #ffab00;
+    /* border: solid 2px #ffab00; */ /* Orange */
+    border: solid 3px #19A7CE;
     border-radius: 2rem;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
+    /* background-color: #ffab00; */ /* Orange */
+    background-color: #000;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
 }
 /* Animation */
 .nav-item:hover {
     cursor: pointer;
-    background: #6e07f3;
-    color: #000;
+    background: #19A7CE;
 }
 /* Navigation Link (Button) */
 .nav-link {
     height: 54px;
     width: 154px;
     display: block;
-    color: #000;
-    transition: .4s;
+    color: #FFF;
+    transition: .2s;
     border-radius: 2rem;
     text-decoration: none;
 }
 /* Animation */
 .nav-link:hover {
-    color: #fff;
+    color: #000;
 }
 /* Button Title (Resume) */
 .nav-links-title {
@@ -107,7 +116,13 @@ body {
 /* MIDDLE TITLE */
 .middle-title-div {
     margin: auto;
-    background: #ffab00;
+    /* background: #ffab00; */
+    /* background: #004cff; */
+    /* background: #a4dbe8; */
+    /* background: #27009b; */
+    /* background: #6e07f3; */
+    /* background: #1C82AD; */ /* Navy and Green Palette */
+    background: #146C94;
     border-radius: 0.8rem;
     height: 140px;
     width: 50%;
@@ -119,7 +134,10 @@ body {
 }
 /* Title Labeled 'Projects' */
 .middle-title {
-    color: #000;
+    /* color: #0067a0; */
+    /* color: #03C988; */
+    /* color: #03C988; */ /* Navy and Green Palette */
+    color: #FFF;
     font-size: 2.5em;
     font-family: 'K2D', sans-serif;
     letter-spacing: 1px;
@@ -130,7 +148,8 @@ body {
 /*===========================================================================*/
 /* PROJECTS */
 .project-section {
-    background-color: #fafafa;
+    background-color: #F6F1F1;
+    /* background-color: #1C82AD; */
     width: 100%;
 }
 /* Each Individual Project */
@@ -164,18 +183,24 @@ body {
 }
 /* Project Button (Link) */
 .project-button{
-    background: #6e07f3;
+    /* background: #6e07f3; */
+    /* background: #004cff; */
+    /* background: #672e7d; */ /* Purple */
+    /* background: #03C988; */ /* Navy and Green Palette */
+    /* background: #FF0000; */ /* Black and Red Palette */
+    background: #19A7CE;
     border: none;
-    border-bottom: 6px solid #470997;
+    /* border-bottom: 6px solid #4a2059; */ /* Purple Palette */
+    border-bottom: 6px solid #1386a5; /* Navy and Green Palette */
     padding: 16px;
     border-radius: 0.8rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
+    /* text-transform: uppercase; */
+    color: #000;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0px;
-    transition: all 0.15s;
+    transition: all 0.1s;
     outline: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -184,6 +209,7 @@ body {
     margin-top: 2px;
     border-bottom-width: 3px;
     cursor: pointer;
+    color: rgb(72, 72, 72);
 }
 .project-button:active{
     margin-top: 5px;
@@ -192,7 +218,6 @@ body {
 .project-animate {
     animation-name: fadeIn;
     animation-duration: 800ms;
-    animation-delay: 300ms;
     animation-timing-function: ease-in;
     animation-fill-mode: both;
 }
@@ -341,9 +366,6 @@ body {
     .nav-list {
         height: 80px;
     }
-    .nav-item {
-        margin: 20px 0 0 20px;
-    }
     .nav-link {
         width: 150px;
         font-size: 1.5rem;
@@ -419,11 +441,6 @@ body {
 @media only screen and (min-width: 850px) {
     .homebody {
         background-size: cover;
-    }
-
-    .nav-item {
-        margin-top: 40px;
-        margin-left: 15%;
     }
     .nav-link {
         font-size: 1.5rem;
