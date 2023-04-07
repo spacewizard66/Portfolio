@@ -61,35 +61,32 @@ function Home() {
     }
 
     return (
-            <div>
-                <div className="nav-list">
-                    <div className="nav-item">
-                        <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">
-                            <p className="nav-links-title">Resume</p>
-                        </a>
-                    </div>
-                </div>
-                
-                <div className="home-description-div">
-                    <p className="home-title">Frontend Developer</p>
-                    <p className="home-skills">JavaScript / React / Python / Django / HTML / CSS / Git</p>
-                    <p className="home-name">Hi, I'm Mason.</p>
-                    <p className="home-description">
-                        A motivated web developer from Pennsylvania, USA.
-                        I absolutely love to learn new technologies, and use it in my everyday life.
-                        Every problem out there is worth solving!
-                        In my freetime, I enjoy admiring art, music, and skateboarding with friends.
-                    </p>
-                </div>
-
-                <div className="middle-title-div">
-                    <h2 className="middle-title">Projects</h2>
-                </div>
-
-                <div className="project-section">
-                    {allProjects}
+        <div>
+            <div className="nav-list">
+                <div className="nav-item">
+                    <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">
+                        <p className="nav-links-title">Resume</p>
+                    </a>
                 </div>
             </div>
+            <div className="home-description-div">
+                <p className="home-title">Frontend Developer</p>
+                <p className="home-skills">JavaScript / React / Python / Django / HTML / CSS / Git</p>
+                <p className="home-name">Hi, I'm Mason.</p>
+                <p className="home-description">
+                    A motivated web developer from Pennsylvania, USA.
+                    I absolutely love to learn new technologies, and use it in my everyday life.
+                    Every problem out there is worth solving!
+                    In my freetime, I enjoy admiring art, music, and skateboarding with friends.
+                </p>
+            </div>
+            <div className="middle-title-div">
+                <h2 className="middle-title">Projects</h2>
+            </div>
+            <div className="project-section">
+                {allProjects}
+            </div>
+        </div>
     );
 }
 export default Home;
