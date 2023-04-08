@@ -70,14 +70,21 @@ function Home() {
                 </div>
             </div>
             <div className="home-description-div">
-                <p className="home-title">Frontend Developer</p>
-                <p className="home-skills">JavaScript / React / Python / Django / HTML / CSS / Git</p>
+                <p className="home-title">Front-End Developer</p>
+                <p className="home-skills">
+                    JavaScript / React / Python / Django / HTML / CSS / Git
+                </p>
                 <p className="home-name">Hi, I'm Mason.</p>
                 <p className="home-description">
-                    A motivated web developer from Pennsylvania, USA.
-                    I absolutely love to learn new technologies, and use it in my everyday life.
-                    Every problem out there is worth solving!
-                    In my freetime, I enjoy admiring art, music, and skateboarding with friends.
+                    A motivated front-end developer with an eagerness to 
+                    create smooth, appealing websites and web applications.
+                    I am excited to continue expanding my skillset with 
+                    honorable languages and great development tools 
+                    while still maintaining drive and focus.
+                    I absolutely love to learn about technology and using it 
+                    in my everyday life.
+                    I believe that every problem out there is worth solving 
+                    and should be pursued with confidence!
                 </p>
             </div>
             <div className="middle-title-div">
