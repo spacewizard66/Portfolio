@@ -81,7 +81,7 @@ function Home() {
                     I am excited to continue expanding my skillset with 
                     honorable languages and great development tools 
                     while still maintaining drive and focus.
-                    I absolutely love to learn about technology and using it 
+                    I absolutely love to learn about technology and use it 
                     in my everyday life.
                     I believe that every problem out there is worth solving 
                     and should be pursued with confidence!
