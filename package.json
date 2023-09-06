@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio - Copy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.2"
   }
 }

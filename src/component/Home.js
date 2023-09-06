@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Projects from '../projects.js';
-import '../style.css';
+import '../style.scss';
 
 function Home() {
     // Brings viewport back to top of page on unload (refresh)
@@ -42,15 +42,15 @@ function Home() {
     let index = 0;
 
     // Loop for loading each project info from
-    // projects.js, and pushes each project to the
-    // allProjects array to be rendered when complete
+    // 'projects.js', and pushes each project to the
+    // allProjects array to be rendered.
     for (let project in projects) {
         allProjects.push(
             <div ref={refs[index]} className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`} key={project}>
                 <img className="project-img" key={`${project}-image`} src={`${projects[project].image}`} alt="displaying each project"></img>
-                <div className="project-details" key={`${project}-details`}>
-                    <p className="project-title" key={`${project}-title`}>{projects[project].title}</p>
-                    <p className="project-description" key={`${project}-description`}>{projects[project].description}</p>
+                <div className="project-info" key={`${project}-info`}>
+                    <p className="project-info-title" key={`${project}-title`}>{projects[project].title}</p>
+                    <p className="project-info-description" key={`${project}-description`}>{projects[project].description}</p>
                     <a href={projects[project].url} key={`${project}-url`} target="_blank" rel="noreferrer">
                         <button className="project-button" key={`${project}-button`}>Learn More</button>
                     </a>
@@ -65,11 +65,11 @@ function Home() {
             <div className="nav-list">
                 <div className="nav-item">
                     <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">
-                        <p className="nav-links-title">Resume</p>
+                        <p className="nav-link-title">Resume</p>
                     </a>
                 </div>
             </div>
-            <div className="home-description-div">
+            <div className="home">
                 <p className="home-title">Front-End Developer</p>
                 <p className="home-skills">
                     JavaScript / React / Python / Django / HTML / CSS / Git
@@ -87,8 +87,8 @@ function Home() {
                     and should be pursued with confidence!
                 </p>
             </div>
-            <div className="middle-title-div">
-                <h2 className="middle-title">Projects</h2>
+            <div className="middle-title">
+                <h2 className="middle-title-text">Projects</h2>
             </div>
             <div className="project-section">
                 {allProjects}

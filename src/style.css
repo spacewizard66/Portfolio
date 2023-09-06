@@ -43,14 +43,12 @@ body {
     background-color: #000;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
-    
 }
 /* Animation */
 .nav-item:hover {
     cursor: pointer;
     background: #19A7CE;
     box-shadow: 0 0 10px 15px rgba(25, 167, 206, .2);
-    
 }
 /* Navigation Link (Button) */
 .nav-link {
@@ -171,40 +169,35 @@ body {
     vertical-align: middle;
 }
 /* Project Button (Link) */
-.project-button{
-    /* background: #FF0000; */ /* Black and Red Palette */
+.project-button {
     background: #19A7CE;
     border: none;
-    border-bottom: 6px solid #1386a5; /* Navy and Green Palette */
+    border-bottom: 6px solid #1386a5;
     padding: 16px;
     border-radius: 0.8rem;
     letter-spacing: 2px;
-    /* text-transform: uppercase; */
     color: #000;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     transition: all 0.1s;
-    outline: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 /* Animations */
-.project-button:hover{
+.project-button:hover {
     margin-top: 2px;
     border-bottom-width: 3px;
     cursor: pointer;
     box-shadow: 0 0 10px 15px rgba(25, 167, 206, .2);
 }
-.project-button:active{
+.project-button:active {
     margin-top: 5px;
-    border-bottom-width: 0px;
+    border-bottom-width: 0;
 }
-.project-animate {
-    animation-name: fadeIn;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: both;
+.project-button:focus {
+    outline: none;
 }
+
 /* ANIMATION FOR OPENING TRANSITIONS */
 /* Fading entrances  */
 @-webkit-keyframes fadeIn {
@@ -216,16 +209,20 @@ body {
     }
 }
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-.animate__fadeIn {
-    -webkit-animation-name: fadeIn;
+.project-animate {
     animation-name: fadeIn;
+    animation-duration: 800ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 800ms;
+    -moz-animation-name: fadeIn;
+    -moz-animation-duration: 800ms;
+    -o-animation-name: fadeIn;
+    -o-animation-duration: 800ms;
 }
 
 
@@ -371,14 +368,14 @@ body {
 
     .middle-title-div {
         height: 80px;
-        translate: 0px 50px;
+        translate: 0 50px;
     }
     .middle-title {
         font-size: 1.8rem;
     }
 
     .project-section {
-        padding: 100px 0px 40px 0px;
+        padding: 100px 0 40px 0;
     }
     .project {
         height: 440px;
@@ -390,7 +387,6 @@ body {
     .project-img {
         height: 200px;
         width: 100%;
-        max-width: 300px;
         max-width: 300px;
     }
     .project-details {
@@ -446,11 +442,11 @@ body {
     }
 
     .middle-title-div {
-        translate: 0px 90px;
+        translate: 0 90px;
     }
 
     .project-section {
-        padding: 260px 0px 120px 0px;
+        padding: 260px 0 120px 0;
     }
     .project {
         height: 240px;
