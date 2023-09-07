@@ -46,54 +46,73 @@ function Home() {
     // allProjects array to be rendered.
     for (let project in projects) {
         allProjects.push(
-            <div ref={refs[index]} className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`} key={project}>
-                <img className="project-img" key={`${project}-image`} src={`${projects[project].image}`} alt="displaying each project"></img>
-                <div className="project-info" key={`${project}-info`}>
-                    <p className="project-info-title" key={`${project}-title`}>{projects[project].title}</p>
-                    <p className="project-info-description" key={`${project}-description`}>{projects[project].description}</p>
-                    <a href={projects[project].url} key={`${project}-url`} target="_blank" rel="noreferrer">
-                        <button className="project-button" key={`${project}-button`}>Learn More</button>
-                    </a>
-                </div>
+            <div
+                ref={refs[index]}
+                className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`}
+                key={project}>
+                <img
+                    className="project-img"
+                    key={`${project}-image`}
+                    src={`${projects[project].image}`}
+                    alt="displaying each project">
+                </img>
+                <section className="project-info" key={`${project}-info`}>
+                    <p className="project-info-title" key={`${project}-title`}>
+                        {projects[project].title}
+                    </p>
+                    <p className="project-info-description" key={`${project}-description`}>
+                        {projects[project].description}
+                    </p>
+                    <button
+                        className="project-button"
+                        onClick={() => window.open(`${projects[project].url}`, "_blank")}
+                        rel="noopener noreferrer"
+                        key={`${project}-button`}
+                    >
+                        Learn More
+                    </button>
+                </section>
             </div>
         );
         index++;
     }
 
     return (
-        <div>
-            <div className="nav-list">
-                <div className="nav-item">
-                    <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">
-                        <p className="nav-link-title">Resume</p>
-                    </a>
-                </div>
-            </div>
-            <div className="home">
-                <p className="home-title">Front-End Developer</p>
-                <p className="home-skills">
-                    JavaScript / React / Python / Django / HTML / CSS / Git
-                </p>
-                <p className="home-name">Hi, I'm Mason.</p>
-                <p className="home-description">
-                    A motivated front-end developer with an eagerness to 
-                    create smooth, appealing websites and web applications.
-                    I am excited to continue expanding my skillset with 
-                    honorable languages and great development tools 
-                    while still maintaining drive and focus.
-                    I absolutely love to learn about technology and use it 
-                    in my everyday life.
-                    I believe that every problem out there is worth solving 
-                    and should be pursued with confidence!
-                </p>
-            </div>
-            <div className="middle-title">
-                <h2 className="middle-title-text">Projects</h2>
-            </div>
-            <div className="project-section">
-                {allProjects}
-            </div>
-        </div>
+        <>
+            <header className="nav-list">
+                <nav className="nav-item">
+                    <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </header>
+            <main>
+                <section className="home">
+                    <header>
+                        <h1 className="home-title">Front-End Developer</h1>
+                    </header>
+                    <p className="home-skills">
+                        JavaScript / React / Python / Django / HTML / CSS / Git
+                    </p>
+                    <h2 className="home-name">Hi, I'm Mason.</h2>
+                    <p className="home-description">
+                        A motivated front-end developer with an eagerness to 
+                        create smooth, appealing websites and web applications.
+                        I am excited to continue expanding my skillset with 
+                        honorable languages and great development tools 
+                        while still maintaining drive and focus.
+                        I absolutely love to learn about technology and use it 
+                        in my everyday life.
+                        I believe that every problem out there is worth solving 
+                        and should be pursued with confidence!
+                    </p>
+                </section>
+                <section className="middle-title">
+                    <h2 className="middle-title-text">Projects</h2>
+                </section>
+                <section className="project-section">
+                    {allProjects}
+                </section>
+            </main>
+        </>
     );
 }
 export default Home;

@@ -1,4 +1,4 @@
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css2?family=K2D:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Doppio+One:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
@@ -61,22 +61,18 @@ body {
   /* Resume Button */
   height: 54px;
   width: 154px;
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
   display: block;
   color: $white;
   transition: 0.2s;
   border-radius: 2rem;
   text-decoration: none;
+  line-height: 48px;
+  text-align: center;
   &:hover {
     color: $black;
-  }
-  &-title {
-    margin: 0;
-    border-radius: 2rem;
-    display: block;
-    line-height: 48px;
-    text-align: center;
-    font-size: 95%;
-    font-family: "Doppio One", sans-serif;
+    font-size: 160%;
   }
 }
 
@@ -297,26 +293,28 @@ body {
       }
       /* Font Awesome Icons */
       &:nth-of-type(1):before {
+        font-family: FontAwesome;
         content: "\f003";
       }
       &:nth-of-type(2):before {
+        font-family: FontAwesome;
         content: "\f0e1";
       }
       &:nth-of-type(3):before {
+        font-family: FontAwesome;
         content: "\f113";
       }
     }
   }
   &-copyright {
     /* Copyright Tag */
+    color: $white;
     width: 300px;
     height: 50px;
+    margin: 0;
+    font-size: 15px;
+    font-family: "Roboto Slab", sans-serif;
     text-align: center;
-    p {
-      font-family: "Roboto Slab", sans-serif;
-      font-size: 15px;
-      color: $white;
-    }
   }
 }
 /* Social Icon Colors */
