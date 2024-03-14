@@ -1,8 +1,8 @@
-/* Functions Gets Current Year for Copyright Tag */
-var d = new Date();
-var currYear = d.getFullYear();
-
 function Footer() {
+    /* Functions Gets Current Year for Copyright Tag */
+    var d = new Date();
+    var currYear = d.getFullYear();
+
     return (
         <footer className="footer">
             <section className="footer-social">
@@ -16,7 +16,9 @@ function Footer() {
                     <span>Github</span>
                 </a>
             </section>
-            <p className="footer-copyright">&copy; {currYear}, Made with ❤️ by Mason Galat.</p>
+            <small className="footer-copyright">
+                &copy; {currYear}, Made with ❤️ by Mason Galat.
+            </small>
         </footer>
     )
 }

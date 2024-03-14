@@ -5,7 +5,7 @@ import '../style.scss';
 
 function Home() {
     // Brings viewport back to top of page on unload (refresh)
-    //  to help animation effects
+    // to help animation effects
     window.onunload = function () {
         window.scrollTo(0, 0);
     }
@@ -24,6 +24,7 @@ function Home() {
     const [ project3Ref, project3 ] = useInView(options);
     const [ project4Ref, project4 ] = useInView(options);
     const [ project5Ref, project5 ] = useInView(options);
+    const [ project6Ref, project6 ] = useInView(options);
 
     // Assigning imported document to variable
     const projects = Projects;
@@ -33,10 +34,10 @@ function Home() {
     const allProjects = [];
 
     // Array of ref variables for projects
-    const refs = [project1Ref, project2Ref, project3Ref, project4Ref, project5Ref];
+    const refs = [project1Ref, project2Ref, project3Ref, project4Ref, project5Ref, project6Ref];
 
     // Array of inView boolean values for projects
-    const inViewValues = [project1, project2, project3, project4, project5];
+    const inViewValues = [project1, project2, project3, project4, project5, project6];
 
     // Initialize index for looping through arrays
     let index = 0;

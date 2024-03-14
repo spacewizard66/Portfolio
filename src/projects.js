@@ -1,29 +1,35 @@
 const projects = {
     "project1": {
+        "image": "/img/SuperSwing.gif",
+        "title": "Super Swing Baseball",
+        "description": "The website for a company named that proudly offers baseball lessons to youth and aspiring athletes. Built using React and SCSS. ",
+        "url": "https://super-swing-baseball.onrender.com/"
+    },
+    "project2": {
         "image": "/img/weatherapp.gif",
         "title": "Weather App",
         "description": "A weather forecast application built with React, OpenWeather's API, & responsive CSS",
         "url": "https://weather-forecast-0ce3.onrender.com/"
     },
-    "project2": {
-        "image": "/img/passwordgenerator.gif",
-        "title": "Password Generator",
-        "description": "Generates a unique and complex password using vanilla JavaScript & CSS",
+    "project3": {
+        "image": "/img/PassPal.gif",
+        "title": "PassPal",
+        "description": "Generates a unique and complex password using vanilla JavaScript & SCSS",
         "url": "https://password-generator-vti7.onrender.com"
     },
-    "project3": {
+    "project4": {
         "image": "/img/alien-invasion.gif",
         "title": "Alien Invasion",
         "description": "Space Invaders clone game that is developed with Python & Pygame",
         "url": "https://github.com/spacewizard66/Alien-Invasion"
     },
-    "project4": {
+    "project5": {
         "image": "/img/PongAI.gif",
         "title": "Pong",
         "description": "Pong arcade game simulation using Python & Pygame",
         "url": "https://github.com/spacewizard66/Pong-AI"
     },
-    "project5": {
+    "project6": {
         "image": "/img/tictactoe.gif",
         "title": "Tic Tac Toe",
         "description": "Fun, 2-player game integrated using Python & Pygame",
