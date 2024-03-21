@@ -1,14 +1,14 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Projects from '../projects.js';
-import '../style.scss';
 
-function Home() {
+export default function Home() {
     // Brings viewport back to top of page on unload (refresh)
     // to help animation effects
     window.onunload = function () {
         window.scrollTo(0, 0);
     }
+
 
     // Declaring options for useInView() hook
     const options = {
@@ -55,7 +55,8 @@ function Home() {
                     className="project-img"
                     key={`${project}-image`}
                     src={`${projects[project].image}`}
-                    alt="displaying each project">
+                    alt="displaying each project"
+                >
                 </img>
                 <section className="project-info" key={`${project}-info`}>
                     <p className="project-info-title" key={`${project}-title`}>
@@ -80,21 +81,21 @@ function Home() {
 
     return (
         <>
-            <header className="nav-list">
-                <nav className="nav-item">
-                    <a className="nav-link" href="img/Mason_Galat_Resume.pdf" target="_blank">Resume</a>
+            <header className="nav">
+                <nav className="nav__item">
+                    <a className="nav__link" href="img/Mason_Galat_Resume.pdf" target="_blank">Resume</a>
                 </nav>
             </header>
             <main>
                 <section className="home">
                     <header>
-                        <h1 className="home-title">Front-End Developer</h1>
+                        <h1 className="home__title">Web Developer</h1>
                     </header>
-                    <p className="home-skills">
-                        JavaScript / React / Python / Django / HTML / CSS / Git
+                    <p className="home__skills">
+                        JavaScript, React, Python, Django, HTML, CSS, Git
                     </p>
-                    <h2 className="home-name">Hi, I'm Mason.</h2>
-                    <p className="home-description">
+                    <h2 className="home__name">Hi, I'm Mason.</h2>
+                    <p className="home__description">
                         A motivated front-end developer with an eagerness to 
                         create smooth, appealing websites and web applications.
                         I am excited to continue expanding my skillset with 
@@ -106,14 +107,14 @@ function Home() {
                         and should be pursued with confidence!
                     </p>
                 </section>
-                <section className="middle-title">
-                    <h2 className="middle-title-text">Projects</h2>
-                </section>
+                <img className="wave" src="img/wave3.png" alt=""></img>
                 <section className="project-section">
+                    <div className="middle__title">
+                        <h2 className="middle__text">Projects</h2>
+                    </div>
                     {allProjects}
                 </section>
             </main>
         </>
     );
-}
-export default Home;
+};

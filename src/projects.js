@@ -2,7 +2,7 @@ const projects = {
     "project1": {
         "image": "/img/SuperSwing.gif",
         "title": "Super Swing Baseball",
-        "description": "The website for a company named that proudly offers baseball lessons to youth and aspiring athletes. Built using React and SCSS. ",
+        "description": "The website for a company that proudly offers baseball lessons to youth and aspiring athletes. Built using React and SCSS. ",
         "url": "https://super-swing-baseball.onrender.com/"
     },
     "project2": {

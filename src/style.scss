@@ -12,27 +12,30 @@ $blue-primary: rgb(25, 167, 206);
 $blue-secondary: rgb(19, 134, 165);
 $blue-shadow: rgba(25, 167, 206, 0.2);
 /* Font */
+$header1: 3rem;
+$header2: 2rem;
 $font-color: rgb(20, 28, 58);
 /* Footer */
 $footer-backround: rgb(31, 31, 31);
 
 * {
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
 }
+
+/* html {
+  overflow: hidden;
+} */
 
 body {
   margin: 0;
-  background: $black;
-  background-attachment: fixed;
-  background-repeat: repeat;
+  background: $white;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -40,10 +43,15 @@ code {
     monospace;
 }
 
+main {
+  background: $black;
+}
+
 /**
  * Navigation Bar
  */
-.nav-list {
+.nav {
+  background: $black;
   width: 100%;
   padding: 0;
   top: 0;
@@ -51,65 +59,77 @@ code {
   list-style-type: none;
   overflow: hidden;
   position: relative;
-}
-.nav-item {
-  height: 50px;
-  width: 150px;
-  margin: 20px 0 20px 20px;
-  float: left;
-  border: solid 3px $blue-primary;
-  border-radius: 2rem;
-  background-color: $black;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  &:hover {
-    cursor: pointer;
-    background: $blue-primary;
-    box-shadow: 0 0 10px 15px $blue-shadow;
+  &__item {
+    height: 50px;
+    width: 150px;
+    margin: 20px 0 20px 20px;
+    float: left;
+    border: solid 3px $blue-primary;
+    border-radius: 2rem;
+    background-color: $black;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background: $blue-primary;
+      box-shadow: 0 0 10px 15px $blue-shadow;
+    }
   }
-}
-.nav-link {
-  /* Resume Button */
-  height: 54px;
-  width: 154px;
-  font-size: 24px;
-  font-family: "Ubuntu", sans-serif;
-  display: block;
-  color: $white;
-  transition: 0.2s;
-  border-radius: 2rem;
-  text-decoration: none;
-  line-height: 48px;
-  text-align: center;
-  &:hover {
-    color: $black;
-    font-size: 160%;
+  &__link {
+    /* Resume Button */
+    height: 54px;
+    width: 154px;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+    display: block;
+    color: $white;
+    transition: 0.2s;
+    border-radius: 2rem;
+    text-decoration: none;
+    line-height: 48px;
+    text-align: center;
+    &:hover {
+      color: $black;
+      font-size: 160%;
+    }
   }
 }
 
 /**
  * Main Section (Home)
  */
+.loading-screen {
+  height: 100vh;
+  width: 100vw;
+  background: $black;
+  opacity: 0;
+  overflow: hidden;
+}
+.hidden {
+  
+  height: 0;
+  transition: display 2s ease;
+}
+
+
 .home {
   width: 100%;
   color: $white;
+  background: $black;
   text-align: center;
   font-size: 16px;
-  &-title {
-    /* (Frontend Developer) */
-    font-size: 3em;
+  &__title {
+    font-size: $header1;
     font-family: "K2D", sans-serif;
     letter-spacing: 2px;
   }
-  &-name {
-    /* Name (Mason Galat) */
-    font-size: 2.2rem;
+  &__name {
+    font-size: $header2;
     font-family: "K2D", sans-serif;
   }
-  &-description {
-    /* Detailed Description */
+  &__description {
     margin: 0 auto;
     line-height: 1.6em;
     word-spacing: 2px;
@@ -117,28 +137,35 @@ code {
   }
 }
 
+.wave {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  translate: 0 6px;
+  overflow: hidden;
+  background: $black;
+}
+
 /**
  * Middle Title
  * "Projects" Label
  */
-.middle-title {
-  /* Container */
-  margin: auto;
-  background: $white-background;
-  border-radius: 0.8rem;
-  height: 140px;
-  width: 50%;
+.middle__title {
+  height: 200px;
+  width: 100%;
   min-width: 240px;
-  max-width: 680px;
+  /* max-width: 680px; */
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  &-text {
+  .middle__text {
     /* Text (h2) */
     color: $black;
-    font-size: 2.8em;
+    font-size: $header1;
     font-family: "K2D", sans-serif;
     letter-spacing: 1px;
+    margin: 0;
   }
 }
 
@@ -230,125 +257,106 @@ code {
   -o-animation-duration: 800ms;
 }
 
+
+
 /**
- * Footer
+ * ^Footer
+ * 
+ * ^The footer is displayed at the bottom of page.
  */
 .footer {
   width: 100%;
-  height: 180px;
-  background-color: $footer-backround;
+  height: 140px;
+  background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  &-social {
-    /* Socials Section */
-    width: 50%;
-    max-width: 260px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    &-link {
-      /* Social Icons (Buttons) */
-      color: $white;
+  &__socials { /* Social Links (Buttons) */
+      height: 40px;
+      width: 50%;
+      max-width: 260px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  &__link { /* Icons */
+      height: 40px;
+      width: 40px;
+      margin: 0;
+      color: #fff;
       border-radius: 6px;
       text-align: center;
       text-decoration: none;
+      line-height: 40px;
       font-family: fontawesome;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      padding-top: 0px;
-      -o-transition: all 0.5s;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      transition: all 0.5s;
+      display: inline-block;
+      /* padding-top: 10px; */
+      -o-transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
       -webkit-font-smoothing: antialiased;
-      & span {
-        /* Pop-Up */
-        color: #666;
-        position: absolute;
-        font-family: sans-serif;
-        bottom: 0;
-        left: -25px;
-        right: -25px;
-        padding: 5px 7px;
-        z-index: 1;
-        font-size: 14px;
-        border-radius: 2px;
-        background: rgb(245, 245, 245);
-        visibility: hidden;
-        opacity: 0;
-        -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        &:before {
-          content: "";
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-top: 5px solid $white;
+      &:hover span { /* text pops up when icon hovered */
+          bottom: 50px;
+          visibility: visible;
+          opacity: 1;
+      }
+      /* Font Awesome icons */
+      &:nth-of-type(1):before {content: '\f003';}
+      &:nth-of-type(2):before {content: '\f0e1';}
+      &:nth-of-type(3):before {content: '\f113';}
+      & span { /* pop-up text */
+          color: black;
           position: absolute;
-          bottom: -5px;
-          left: 40px;
-        }
+          font-family: sans-serif;
+          bottom: 0;
+          left: -25px;
+          right: -25px;
+          padding: 5px 7px;
+          z-index: 1;
+          font-size: 14px;
+          border: solid 2px #1f1f1f;
+          border-radius: 3px;
+          background: #f5f5f5;
+          visibility: hidden;
+          opacity: 0;
+          line-height: normal;
+          -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          &:before { /* pop-up text arrow */
+              content: '';
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid #fff;
+              position: absolute;
+              bottom: -5px;
+              left: 40px;
+          }
       }
-      &:hover span {
-        bottom: 50px;
-        visibility: visible;
-        opacity: 1;
-      }
-      /* Font Awesome Icons */
-      &:nth-of-type(1):before {
-        font-family: FontAwesome;
-        content: "\f003";
-      }
-      &:nth-of-type(2):before {
-        font-family: FontAwesome;
-        content: "\f0e1";
-      }
-      &:nth-of-type(3):before {
-        font-family: FontAwesome;
-        content: "\f113";
-      }
-    }
   }
-  &-copyright {
-    /* Copyright Tag */
-    color: $white;
-    width: 300px;
-    height: 50px;
-    margin: 0;
-    font-size: 15px;
-    font-family: "Roboto Slab", sans-serif;
-    text-align: center;
-  }
-}
-/* Social Icon Colors */
-.email {
-  background: #8a2be2;
-  &:hover {
-    background: #a871db;
+  &__copyright { /* copyright tag */
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 15px;
+      color: #fff;
   }
 }
-.linkedin {
-  background: #378fe9;
-  &:hover {
-    background: #7eaedd;
-  }
-}
-.github {
-  background: #333333;
-  &:hover {
-    background: #575757;
-  }
-}
+/* Social Link Colors */
+.email {background: #8a2be2;}
+.email:hover {background: #a871db;}
+.linkedin {background: #378fe9;}
+.linkedin:hover {background: #7eaedd;}
+.github {background: #333333;}
+.github:hover {background: #575757;}
+
+
+
+
 
 /**
  * Scaling for Responsiveness
@@ -359,40 +367,46 @@ code {
     background-size: cover;
   }
 
-  .nav-link {
-    width: 150px;
-    font-size: 1.5rem;
+  .nav {
+    &__link {
+      width: 150px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .wave {
+    height: 40px;
   }
 
   .home {
     width: 90%;
     height: 200%;
-    margin: 20px auto;
-    &-title {
-      margin: 20px auto;
+    padding-top: 40px;
+    margin: auto;
+    &__title {
+      margin: 0;
     }
-    &-skills {
+    &__skills {
       font-size: 1rem;
     }
-    &-name {
+    &__name {
       margin: 80px 0 20px 0;
     }
-    &-description {
+    &__description {
       width: 100%;
       font-size: 1.2rem;
     }
   }
 
-  .middle-title {
-    height: 80px;
-    translate: 0 50px;
-    &-text {
-      font-size: 1.8rem;
+  .middle__title {
+    height: 140px;
+    .middle__text {
+      font-size: 2.2rem;
     }
   }
 
   .project-section {
-    padding: 100px 0 40px 0;
+    padding: 0 0 40px 0;
   }
   .project {
     height: 440px;
@@ -434,42 +448,43 @@ code {
   .homebody {
     background-size: cover;
   }
-  .nav-link {
-    font-size: 1.5rem;
+  .nav {
+    &__link {
+      font-size: 1.5rem;
+    }
   }
-
   .home {
     min-width: 650px;
     padding: 1.5% 0 2% 0;
-    margin: 1% 0 2% 0;
-    &-title {
+    margin: 0 0 2% 0;
+    &__title {
       margin: 0 auto;
     }
-    &-skills {
+    &__skills {
       font-size: 1.3rem;
     }
-    &-name {
+    &__name {
       margin: 120px 0 20px 0;
     }
-    &-description {
+    &__description {
       width: 28%;
       min-width: 800px;
       font-size: 1.4rem;
     }
   }
 
-  .middle-title {
-    translate: 0 90px;
+  .middle__title {
+    /* padding-top: 100px; */
   }
 
   .project-section {
-    padding: 260px 0 120px 0;
+    padding: 0 0 120px 0;
   }
   .project {
     height: 240px;
     width: 48%;
     min-width: 800px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-bottom: 100px;
     &-img {
       height: 100%;
@@ -481,16 +496,16 @@ code {
       width: 60%;
       float: right;
       &-title {
-        font-size: 2.2rem;
+        font-size: $header2;
         margin: 0;
       }
       &-description {
         height: 100px;
         width: 80%;
-        font-size: 1.4rem;
-        margin: 16px auto;
+        font-size: 1.2rem;
+        margin: auto;
         padding: 16px;
-        display: table-cell;
+        /* display: table-cell; */
       }
     }
     &-button {
