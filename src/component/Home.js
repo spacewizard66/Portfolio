@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Projects from '../projects.js';
+/* import '../style.scss' */
 
 export default function Home() {
     // Brings viewport back to top of page on unload (refresh)
@@ -8,7 +9,6 @@ export default function Home() {
     window.onunload = function () {
         window.scrollTo(0, 0);
     }
-
 
     // Declaring options for useInView() hook
     const options = {
@@ -50,7 +50,8 @@ export default function Home() {
             <div
                 ref={refs[index]}
                 className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`}
-                key={project}>
+                key={project}
+            >
                 <img
                     className="project-img"
                     key={`${project}-image`}
@@ -71,13 +72,13 @@ export default function Home() {
                         rel="noopener noreferrer"
                         key={`${project}-button`}
                     >
-                        Learn More
+                        {projects[project].button}
                     </button>
                 </section>
             </div>
         );
         index++;
-    }
+    };
 
     return (
         <>

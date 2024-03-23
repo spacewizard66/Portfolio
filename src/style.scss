@@ -103,14 +103,27 @@ main {
 .loading-screen {
   height: 100vh;
   width: 100vw;
-  background: $black;
-  opacity: 0;
+  /* background: $black; */
+  /* opacity: 0; */
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: loadingFade 1500ms ease;
 }
 .hidden {
-  
-  height: 0;
-  transition: display 2s ease;
+  opacity: 0;
+  transition: all 2s ease;
+}
+@keyframes loadingFade {
+  0% {background: $white;};
+  15% {background: $black};
+  50% {background: $black};
+  85% {background: $black};
+  100% {
+      background: $white;
+    };
 }
 
 
@@ -124,17 +137,33 @@ main {
     font-size: $header1;
     font-family: "K2D", sans-serif;
     letter-spacing: 2px;
+    animation: titleFadeIn 200ms ease-out backwards;
+  }
+  &__skills {
+    animation: titleFadeIn 200ms ease-out backwards;
   }
   &__name {
     font-size: $header2;
     font-family: "K2D", sans-serif;
+    animation: titleFadeIn 200ms ease-out backwards;
   }
   &__description {
     margin: 0 auto;
     line-height: 1.6em;
     word-spacing: 2px;
     letter-spacing: -1px;
+    animation: titleFadeIn 200ms ease-out backwards;
   }
+}
+@keyframes titleFadeIn {
+  from {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+    };
+  to {
+      transform: none;
+      opacity: 1;
+    };
 }
 
 .wave {
@@ -169,8 +198,9 @@ main {
   }
 }
 
+
 /**
- * All Projects
+ * ^Projects
  */
 .project-section {
   background-color: $white-background;
