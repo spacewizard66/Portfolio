@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Loading() {
     return (
-        <div className={`${"loading-screen"}`}>Mason Galat</div>
+        <div className={`${"loading-screen"}`}></div>
     );
 };

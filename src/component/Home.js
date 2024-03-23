@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import Projects from '../projects.js';
+import Projects from './projects.js';
 /* import '../style.scss' */
 /* import wave from '../../public/img/wave3.png'; */
 
@@ -126,7 +126,7 @@ export default function Home() {
                     </p>
                 </section>
                 <div className="bottom">
-                    <img className="wave" src="img/wave3.png" alt=""></img>
+                    <img className="wave" src="/img/wave3.png" alt=""></img>
                     <section className="project-section">
                         <div className="middle__title">
                             <h2 className="middle__text">Projects</h2>
