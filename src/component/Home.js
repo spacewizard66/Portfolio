@@ -57,6 +57,7 @@ export default function Home() {
                     key={`${project}-image`}
                     src={`${projects[project].image}`}
                     alt="displaying each project"
+                    loading="lazy"
                 >
                 </img>
                 <section className="project-info" key={`${project}-info`}>
@@ -108,13 +109,15 @@ export default function Home() {
                         and should be pursued with confidence!
                     </p>
                 </section>
-                <img className="wave" src="img/wave3.png" alt=""></img>
-                <section className="project-section">
-                    <div className="middle__title">
-                        <h2 className="middle__text">Projects</h2>
-                    </div>
-                    {allProjects}
-                </section>
+                <div className="bottom">
+                    <img className="wave" src="img/wave3.png" alt="" loading="lazy"></img>
+                    <section className="project-section">
+                        <div className="middle__title">
+                            <h2 className="middle__text">Projects</h2>
+                        </div>
+                        {allProjects}
+                    </section>
+                </div>
             </main>
         </>
     );

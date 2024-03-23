@@ -137,33 +137,37 @@ main {
     font-size: $header1;
     font-family: "K2D", sans-serif;
     letter-spacing: 2px;
-    animation: titleFadeIn 200ms ease-out backwards;
+    animation: fadeUp 200ms ease-out 400ms backwards;
   }
   &__skills {
-    animation: titleFadeIn 200ms ease-out backwards;
+    animation: fadeUp 200ms ease-out 400ms backwards;
   }
   &__name {
     font-size: $header2;
     font-family: "K2D", sans-serif;
-    animation: titleFadeIn 200ms ease-out backwards;
+    animation: fadeUp 200ms ease-out 600ms backwards;
   }
   &__description {
     margin: 0 auto;
     line-height: 1.6em;
     word-spacing: 2px;
     letter-spacing: -1px;
-    animation: titleFadeIn 200ms ease-out backwards;
+    animation: fadeUp 200ms ease-out 600ms backwards;
   }
 }
-@keyframes titleFadeIn {
+@keyframes fadeUp {
   from {
-      transform: translate3d(0, 100%, 0);
       opacity: 0;
+      transform: translateY(20px);
     };
   to {
-      transform: none;
       opacity: 1;
+      transform: none;
     };
+}
+
+.bottom {
+  animation: fadeUp 400ms ease 0ms backwards;
 }
 
 .wave {
