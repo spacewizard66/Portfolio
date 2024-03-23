@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Projects from '../projects.js';
 /* import '../style.scss' */
+/* import wave from '../../public/img/wave3.png'; */
 
 export default function Home() {
+    /* const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const image = new Image();
+        image.onload = () => setIsImageLoaded(true);
+        image.src = wave;
+    
+        return () => {
+          image.onload = () => null;
+        };
+      }, []); */
+
     // Brings viewport back to top of page on unload (refresh)
     // to help animation effects
     window.onunload = function () {
@@ -57,7 +70,6 @@ export default function Home() {
                     key={`${project}-image`}
                     src={`${projects[project].image}`}
                     alt="displaying each project"
-                    loading="lazy"
                 >
                 </img>
                 <section className="project-info" key={`${project}-info`}>
@@ -80,6 +92,10 @@ export default function Home() {
         );
         index++;
     };
+
+    /* if (!isImageLoaded) {
+        return null;
+    } */
 
     return (
         <>
@@ -110,7 +126,7 @@ export default function Home() {
                     </p>
                 </section>
                 <div className="bottom">
-                    <img className="wave" src="img/wave3.png" alt="" loading="lazy"></img>
+                    <img className="wave" src="img/wave3.png" alt=""></img>
                     <section className="project-section">
                         <div className="middle__title">
                             <h2 className="middle__text">Projects</h2>

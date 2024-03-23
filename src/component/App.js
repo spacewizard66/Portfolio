@@ -5,9 +5,7 @@ import Loading from './Loading.js'
 import { useEffect, useState } from 'react';
 import '../style.scss';
 
-const style = React.lazy(() =>
-    import('../style.scss')
-);
+
 
 export default function App() {
     /* const [loading, setLoading] = useState(true)
