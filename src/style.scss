@@ -58,6 +58,7 @@ main {
   list-style-type: none;
   overflow: hidden;
   position: relative;
+  
   &__item {
     height: 50px;
     width: 150px;
@@ -70,6 +71,7 @@ main {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    animation: fadeDown 200ms ease-out 0ms backwards;
     &:hover {
       cursor: pointer;
       background: $blue-primary;
@@ -99,7 +101,7 @@ main {
 /**
  * Main Section (Home)
  */
-.loading-screen {
+.loading {
   height: 100vh;
   width: 100vw;
   /* background: $black; */
@@ -117,12 +119,13 @@ main {
 }
 @keyframes loadingFade {
   0% {background: $white;};
-  15% {background: $black};
-  50% {background: $black};
-  85% {background: $black};
-  100% {
-      background: $white;
-    };
+  20% {background: $black};
+  100% {background: $black;};
+}
+@-webkit-keyframes loadingFade {
+  0% {background: $white;};
+  20% {background: $black};
+  100% {background: $black;};
 }
 
 
@@ -164,11 +167,20 @@ main {
       transform: none;
     };
 }
-
-.bottom {
-  animation: fadeUp 400ms ease 0ms backwards;
+@keyframes fadeDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+    };
+  to {
+      opacity: 1;
+      transform: none;
+    };
 }
 
+.bottom {
+  animation: fadeUp 400ms ease 800ms backwards;
+}
 .wave {
   height: 100px;
   width: 100%;

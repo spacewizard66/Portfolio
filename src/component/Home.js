@@ -62,14 +62,14 @@ export default function Home() {
         allProjects.push(
             <div
                 ref={refs[index]}
-                className={`${"project"} ${inViewValues[index] ? "project-animate" : ""}`}
+                className={`project ${inViewValues[index] ? "project-animate" : ""}`}
                 key={project}
             >
                 <img
                     className="project-img"
                     key={`${project}-image`}
-                    src={`${projects[project].image}`}
-                    alt="displaying each project"
+                    src={projects[project].image}
+                    alt="Project Image"
                 >
                 </img>
                 <section className="project-info" key={`${project}-info`}>
@@ -81,7 +81,7 @@ export default function Home() {
                     </p>
                     <button
                         className="project-button"
-                        onClick={() => window.open(`${projects[project].url}`, "_blank")}
+                        onClick={() => window.open(projects[project].url, "_blank")}
                         rel="noopener noreferrer"
                         key={`${project}-button`}
                     >
@@ -125,7 +125,7 @@ export default function Home() {
                         and should be pursued with confidence!
                     </p>
                 </section>
-                <div className="bottom">
+                <section className="bottom">
                     <img className="wave" src="/img/wave3.png" alt=""></img>
                     <section className="project-section">
                         <div className="middle__title">
@@ -133,7 +133,7 @@ export default function Home() {
                         </div>
                         {allProjects}
                     </section>
-                </div>
+                </section>
             </main>
         </>
     );
