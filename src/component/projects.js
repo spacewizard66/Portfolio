@@ -27,13 +27,13 @@ const projects = {
         "url": "https://github.com/spacewizard66/Alien-Invasion",
         "button": "View Github"
     },
-    "project5": {
+    /* "project5": {
         "image": "/img/PongAI.gif",
         "title": "Pong",
         "description": "Pong arcade game simulation using Python & Pygame",
         "url": "https://github.com/spacewizard66/Pong-AI",
         "button": "View Github"
-    },
+    }, */
     "project6": {
         "image": "/img/tictactoe.gif",
         "title": "Tic Tac Toe",
