@@ -69,7 +69,7 @@ export default function Home() {
                     className="project-img"
                     key={`${project}-image`}
                     src={projects[project].image}
-                    alt="Project Image"
+                    alt="Project"
                 >
                 </img>
                 <section className="project-info" key={`${project}-info`}>
@@ -110,7 +110,7 @@ export default function Home() {
                         <h1 className="home__title">Web Developer</h1>
                     </header>
                     <p className="home__skills">
-                        JavaScript, React, Python, Django, HTML, CSS, Git
+                        JavaScript, React, Python, Django, HTML/CSS, SASS/SCSS, Git
                     </p>
                     <h2 className="home__name">Hi, I'm Mason.</h2>
                     <p className="home__description">

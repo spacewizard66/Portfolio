@@ -23,12 +23,13 @@ $footer-backround: rgb(31, 31, 31);
 }
 
 /* html {
-  overflow: hidden;
+  background: $black;
 } */
 
 body {
   margin: 0;
-  background: $white;
+  /* background: $black; */
+  /* animation: loadingFade 1500ms ease; */
 }
 
 body {
@@ -58,7 +59,6 @@ main {
   list-style-type: none;
   overflow: hidden;
   position: relative;
-  
   &__item {
     height: 50px;
     width: 150px;
@@ -104,13 +104,14 @@ main {
 .loading {
   height: 100vh;
   width: 100vw;
-  /* background: $black; */
+  background: $black;
   /* opacity: 0; */
   overflow: hidden;
   position: fixed;
+  /* opacity: 0; */
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 2;
   animation: loadingFade 1500ms ease;
 }
 .hidden {
@@ -119,12 +120,12 @@ main {
 }
 @keyframes loadingFade {
   0% {background: $white;};
-  20% {background: $black};
+  50% {background: $black};
   100% {background: $black;};
 }
 @-webkit-keyframes loadingFade {
   0% {background: $white;};
-  20% {background: $black};
+  50% {background: $black};
   100% {background: $black;};
 }
 
@@ -180,12 +181,14 @@ main {
 
 .bottom {
   animation: fadeUp 400ms ease 800ms backwards;
+  display: flex;
+  flex-direction: column;
 }
 .wave {
-  height: 100px;
+  height: 120px;
   width: 100%;
   margin: 0;
-  translate: 0 6px;
+  /* translate: 0 3px; */
   overflow: hidden;
   /* background: url("../public/img/wave3.png");
   background-size: cover;
