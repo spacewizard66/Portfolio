@@ -1,4 +1,4 @@
-const projectsInfo = {
+const info = {
     "project1": {
         "image": "/img/SuperSwing.gif",
         "title": "Super Swing Baseball",
@@ -35,4 +35,4 @@ const projectsInfo = {
         "button": "View Github"
     }
 };
-export default projectsInfo;
+export default info;

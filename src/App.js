@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 
 import Footer from './component/Footer';
-import Loading from './component/Loading'
+import Loading from './component/Loading';
 import Projects from './component/Projects';
 
 import './style.scss';

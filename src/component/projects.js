@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useInView } from 'react-intersection-observer';
 
-import projectsInfo from './projectsInfo'
+import projectsInfo from './info'
 
 export default function Projects() {
     // Declaring options for useInView() hook
