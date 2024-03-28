@@ -1,45 +1,84 @@
-const projects = {
-    "project1": {
-        "image": "/img/SuperSwing.gif",
-        "title": "Super Swing Baseball",
-        "description": "The website for a company that proudly offers baseball lessons to youth and aspiring athletes. Built using React and SCSS. ",
-        "url": "https://super-swing-baseball.onrender.com/",
-        "button": "Live Site"
-    },
-    "project2": {
-        "image": "/img/weatherapp.gif",
-        "title": "Weather App",
-        "description": "A weather forecast application built with React, OpenWeather's API, & responsive CSS",
-        "url": "https://weather-forecast-0ce3.onrender.com/",
-        "button": "Live Site"
-    },
-    "project3": {
-        "image": "/img/PassPal.gif",
-        "title": "PassPal",
-        "description": "Generates a unique and complex password using vanilla JavaScript & SCSS",
-        "url": "https://password-generator-vti7.onrender.com",
-        "button": "Live Site"
-    },
-    "project4": {
-        "image": "/img/alien-invasion.gif",
-        "title": "Alien Invasion",
-        "description": "Space Invaders clone game that is developed with Python & Pygame",
-        "url": "https://github.com/spacewizard66/Alien-Invasion",
-        "button": "View Github"
-    },
-    /* "project5": {
-        "image": "/img/PongAI.gif",
-        "title": "Pong",
-        "description": "Pong arcade game simulation using Python & Pygame",
-        "url": "https://github.com/spacewizard66/Pong-AI",
-        "button": "View Github"
-    }, */
-    "project6": {
-        "image": "/img/tictactoe.gif",
-        "title": "Tic Tac Toe",
-        "description": "Fun, 2-player game integrated using Python & Pygame",
-        "url": "https://github.com/spacewizard66/TicTacToe",
-        "button": "View Github"
+import React from 'react';
+
+import { useInView } from 'react-intersection-observer';
+
+import projectsInfo from './projectsInfo'
+
+export default function Projects() {
+    // Declaring options for useInView() hook
+    const options = {
+        triggerOnce: true,
+        threshold: 0.1,
     }
+
+    // useInView hooks that returns a boolean (true, false) if in viewport.
+    const [ project1Ref, project1 ] = useInView(options);
+    const [ project2Ref, project2 ] = useInView(options);
+    const [ project3Ref, project3 ] = useInView(options);
+    const [ project4Ref, project4 ] = useInView(options);
+    const [ project5Ref, project5 ] = useInView(options);
+
+    // Array of ref variables
+    const refs = [
+        project1Ref,
+        project2Ref,
+        project3Ref,
+        project4Ref,
+        project5Ref
+    ];
+
+    // Array of inView boolean values
+    const inViewValues = [
+        project1,
+        project2,
+        project3,
+        project4,
+        project5
+    ];
+
+    // Array to store all projects during loop
+    const allProjects = [];
+
+    // Loop for loading each project info from 'projectsInfo.js',
+    // then pushes each project to the 'allProjects' array
+    let index = 0;
+    for (let project in projectsInfo) {
+        allProjects.push(
+            <div
+                ref={refs[index]}
+                className={`project ${inViewValues[index] ? "project__animate" : ""}`}
+                key={project}
+            >
+                <img
+                    className="project__img"
+                    key={`${project}-image`}
+                    src={projectsInfo[project].image}
+                    alt=""
+                >
+                </img>
+                <section className="project__info" key={`${project}-info`}>
+                    <p className="project__title" key={`${project}-title`}>
+                        {projectsInfo[project].title}
+                    </p>
+                    <p className="project__description" key={`${project}-description`}>
+                        {projectsInfo[project].description}
+                    </p>
+                    <button
+                        className="project__button"
+                        onClick={() => window.open(projectsInfo[project].url, "_blank")}
+                        rel="noopener noreferrer"
+                        key={`${project}-button`}
+                    >
+                        {projectsInfo[project].button}
+                    </button>
+                </section>
+            </div>
+        );
+        index++;
+    };
+    return (
+        <>
+            {allProjects}
+        </>
+    )
 };
-export default projects;
