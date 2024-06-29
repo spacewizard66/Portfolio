@@ -1,3 +1,15 @@
+import image5 from '../../public/img/SuperSwing.gif';
+import image4 from '../../public/img/WeatherApp.gif'
+import image3 from '../../public/img/PassPal.gif'
+import image2 from '../../public/img/AlienInvasion.gif'
+import image1 from '../../public/img/TicTacToe.gif'
+
+/* const image5 = require('../../public/img/SuperSwing.gif');
+const image4 = require('../../public/img/WeatherApp.gif');
+const image3 = require('../../public/img/PassPal.gif');
+const image2 = require('../../public/img/AlienInvasion.gif');
+const image1 = require('../../public/img/TicTacToe.gif'); */
+
 type Project = {
     [key: string]: {
         image: string;
@@ -9,36 +21,36 @@ type Project = {
 }
 
 const info: Project = {
-    "project1": {
-        "image": "/img/SuperSwing.gif",
+    "project5": {
+        "image": image5,
         "title": "Super Swing Baseball",
         "description": "The website for a company that proudly offers baseball lessons to youth and aspiring athletes. Built using React and SCSS. ",
         "url": "https://super-swing-baseball.onrender.com/",
         "button": "Live Site"
     },
-    "project2": {
-        "image": "/img/weatherapp.gif",
+    "project4": {
+        "image": image4,
         "title": "Weather App",
         "description": "A weather forecast application built with React, OpenWeather's API, & responsive CSS",
         "url": "https://weather-forecast-0ce3.onrender.com/",
         "button": "Live Site"
     },
     "project3": {
-        "image": "/img/PassPal.gif",
+        "image": image3,
         "title": "PassPal",
         "description": "Generates a unique and complex password using vanilla JavaScript & SCSS",
         "url": "https://password-generator-vti7.onrender.com",
         "button": "Live Site"
     },
-    "project4": {
-        "image": "/img/alien-invasion.gif",
+    "project2": {
+        "image": image2,
         "title": "Alien Invasion",
         "description": "Space Invaders clone game that is developed with Python & Pygame",
         "url": "https://github.com/spacewizard66/Alien-Invasion",
         "button": "View Github"
     },
-    "project5": {
-        "image": "/img/tictactoe.gif",
+    "project1": {
+        "image": image1,
         "title": "Tic Tac Toe",
         "description": "Fun, 2-player game integrated using Python & Pygame",
         "url": "https://github.com/spacewizard66/TicTacToe",

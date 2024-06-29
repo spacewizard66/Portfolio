@@ -35,7 +35,7 @@ module.exports = {
 			},
 			// 3rd Rule
 			{
-				test: /\.(jpg|png|svg)$/,
+				test: /\.(jpg|png|svg|gif)$/,
 				use: ['url-loader']
 			},
 		],

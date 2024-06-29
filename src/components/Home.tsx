@@ -2,7 +2,7 @@ import React from 'react';
 
 import banner from '../../public/img/banner.png';
 
-export default function Home(props: React.ReactNode): React.ReactNode {
+export default function Home(props): React.ReactNode {
 	return (
 		<>
 			<header className="nav">

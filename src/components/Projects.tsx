@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 
 import info from './info'
 
-import '../../public/img/SuperSwing.gif'
+
 
 
 export default function Projects() {
