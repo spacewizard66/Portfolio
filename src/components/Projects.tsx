@@ -1,12 +1,14 @@
 import React from 'react';
-
 import { useInView } from 'react-intersection-observer';
 
-import projectsInfo from './info'
+import info from './info'
+
+import '../../public/img/SuperSwing.gif'
+
 
 export default function Projects() {
     // Declaring options for useInView() hook
-    const options: {triggerOnce: boolean, threshold: number} = {
+    const options = {
         triggerOnce: true,
         threshold: 0.1,
     }
@@ -37,12 +39,12 @@ export default function Projects() {
     ];
 
     // Array to store all projects during loop
-    const allProjects = [];
+    const allProjects: React.ReactNode[] = [];
 
     // Loop for loading each project info from 'projectsInfo.js',
     // then pushes each project to the 'allProjects' array
     let index: number = 0;
-    for (let project in projectsInfo) {
+    for (let project in info) {
         allProjects.push(
             <div
                 ref={refs[index]}
@@ -52,30 +54,31 @@ export default function Projects() {
                 <img
                     className="project__img"
                     key={`${project}-image`}
-                    src={projectsInfo[project].image}
+                    src={info[project].image}
                     alt=""
                 >
                 </img>
                 <section className="project__info" key={`${project}-info`}>
                     <p className="project__title" key={`${project}-title`}>
-                        {projectsInfo[project].title}
+                        {info[project].title}
                     </p>
                     <p className="project__description" key={`${project}-description`}>
-                        {projectsInfo[project].description}
+                        {info[project].description}
                     </p>
                     <button
                         className="project__button"
-                        onClick={() => window.open(projectsInfo[project].url, "_blank")}
+                        onClick={() => window.open(info[project].url, "_blank")}
                         rel="noopener noreferrer"
                         key={`${project}-button`}
                     >
-                        {projectsInfo[project].button}
+                        {info[project].button}
                     </button>
                 </section>
             </div>
         );
         index++;
     };
+
     return (
         <>
             {allProjects}

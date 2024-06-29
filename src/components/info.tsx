@@ -1,4 +1,14 @@
-const info = {
+type Project = {
+    [key: string]: {
+        image: string;
+        title: string;
+        description: string;
+        url: string;
+        button: string;
+    }
+}
+
+const info: Project = {
     "project1": {
         "image": "/img/SuperSwing.gif",
         "title": "Super Swing Baseball",

@@ -1,12 +1,8 @@
-import React from "react";
+import React from 'react';
 
-export default function Home(props): React.ReactNode {
-	// Brings viewport back to top of page on unload (refresh)
-	// to help animation effects
-	window.onunload = function () {
-		window.scrollTo(0, 0);
-	};
+import banner from '../../public/img/banner.png';
 
+export default function Home(props: React.ReactNode): React.ReactNode {
 	return (
 		<>
 			<header className="nav">
@@ -42,7 +38,7 @@ export default function Home(props): React.ReactNode {
 					</p>
 				</section>
 				<section className="section2">
-					<img className="section2__banner" src="/img/banner.png" alt=""></img>
+					<img className="section2__banner" src={banner} alt=""></img>
 					<section className="projects">
 						<div className="projects__title">
 							<h2 className="projects__title-text">Projects</h2>
