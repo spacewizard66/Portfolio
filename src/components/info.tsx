@@ -1,8 +1,8 @@
 import image5 from '../../public/img/SuperSwing.gif';
-import image4 from '../../public/img/WeatherApp.gif'
-import image3 from '../../public/img/PassPal.gif'
-import image2 from '../../public/img/AlienInvasion.gif'
-import image1 from '../../public/img/TicTacToe.gif'
+import image4 from '../../public/img/WeatherApp.gif';
+import image3 from '../../public/img/PassPal.gif';
+import image2 from '../../public/img/AlienInvasion.gif';
+import image1 from '../../public/img/TicTacToe.gif';
 
 /* const image5 = require('../../public/img/SuperSwing.gif');
 const image4 = require('../../public/img/WeatherApp.gif');
