@@ -4,12 +4,6 @@ import image3 from '../../public/img/PassPal.gif';
 import image2 from '../../public/img/AlienInvasion.gif';
 import image1 from '../../public/img/TicTacToe.gif';
 
-/* const image5 = require('../../public/img/SuperSwing.gif');
-const image4 = require('../../public/img/WeatherApp.gif');
-const image3 = require('../../public/img/PassPal.gif');
-const image2 = require('../../public/img/AlienInvasion.gif');
-const image1 = require('../../public/img/TicTacToe.gif'); */
-
 type Project = {
     [key: string]: {
         image: string;

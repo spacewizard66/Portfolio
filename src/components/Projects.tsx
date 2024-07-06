@@ -4,38 +4,36 @@ import { useInView } from 'react-intersection-observer';
 import info from './info'
 
 
-
-
 export default function Projects() {
     // Declaring options for useInView() hook
-    const options = {
+    const options: {triggerOnce: boolean, threshold: number} = {
         triggerOnce: true,
         threshold: 0.1,
     }
 
     // useInView hooks that returns a boolean (true, false) if in viewport.
-    const [ project1Ref, project1 ] = useInView(options);
-    const [ project2Ref, project2 ] = useInView(options);
-    const [ project3Ref, project3 ] = useInView(options);
-    const [ project4Ref, project4 ] = useInView(options);
     const [ project5Ref, project5 ] = useInView(options);
+    const [ project4Ref, project4 ] = useInView(options);
+    const [ project3Ref, project3 ] = useInView(options);
+    const [ project2Ref, project2 ] = useInView(options);
+    const [ project1Ref, project1 ] = useInView(options);
 
     // Array of ref variables
     const refs = [
-        project1Ref,
-        project2Ref,
-        project3Ref,
+        project5Ref,
         project4Ref,
-        project5Ref
+        project3Ref,
+        project2Ref,
+        project1Ref,
     ];
 
     // Array of inView boolean values
     const inViewValues: boolean[] = [
-        project1,
-        project2,
-        project3,
+        project5,
         project4,
-        project5
+        project3,
+        project2,
+        project1,
     ];
 
     // Array to store all projects during loop

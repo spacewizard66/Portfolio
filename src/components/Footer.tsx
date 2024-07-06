@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Footer() {
     /* Functions Gets Current Year for Copyright Tag */
-    var d = new Date();
-    var currYear = d.getFullYear();
+    var date = new Date();
+    var currYear: number = date.getFullYear();
 
     return (
         <footer className="footer">
