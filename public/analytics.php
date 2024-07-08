@@ -2,9 +2,10 @@
 
     $address = "216.24.57.1";
     $port = "10000";
+    $temp = 1;
 
     // Create Socket
-    if(!($socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)))
+    if(!($socket = socket_create(AF_INET, SOCK_DGRAM, 0)))
     {
         $errorcode = socket_last_error();
         $errormsg = socket_strerror($errorcode);
@@ -15,15 +16,24 @@
 
     socket_bind($socket, $address, $port);
 
-    socket_listen($socket, 5);
+    socket_listen($socket, 1);
 
-    $client = socket_accept($socket);
+    while ($temp == 1)
+    {
+        $client = socket_accept($socket);
+        $input = socket_read($client, 2024);
 
-    $output = "Connection Successful!";
+        if ($input == 'exit')
+        {
+            $close = socket_close($socket);
+            $temp = 0;
+        }
+        if ($temp == 1)
+        {
+            $output = "Testing 1 2 3 4 5... \nConnection Successful!";
+        }
 
-    socket_write($client, $output);
-
-    socket_close($socket);
-
-
+        echo $output;
+        sleep(5);
+    }
 ?>
