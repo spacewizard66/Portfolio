@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Loading(): React.ReactNode {
+export default function Loading(): React.JSX.Element{
     return (
-        <div className={`${"loading"}`}></div>
+        <div className="loading"></div>
     );
 };

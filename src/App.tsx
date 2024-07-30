@@ -1,25 +1,29 @@
 import React, { lazy, Suspense } from 'react';
 
 import Loading from './components/Loading';
+import About from './components/About';
 import Projects from './components/Projects';
+import Certificates from './components/Certificates';
 import Footer from './components/Footer';
 
 import './style.scss';
 
-export default function App(): React.ReactNode {
+export default function App(): React.JSX.Element {
     // Lazy load 'Home.js', and set minimum delay time
-    const Home = lazy(() => Promise.all([
-            import("./components/Home"),
-            new Promise((resolve) => setTimeout(resolve, 600))
+    const Main = lazy(() => Promise.all([
+            import("./components/Main"),
+            new Promise((resolve) => setTimeout(resolve, 500))
         ]).then(([module]) => module)
     );
 
     return (
         <>
             <Suspense fallback={<Loading />}>
-                <Home>
+                <About />
+                <Main>
                     <Projects />
-                </Home>
+                    <Certificates />
+                </Main>
                 <Footer />
             </Suspense>
         </>

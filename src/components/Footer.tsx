@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Footer() {
-    /* Functions Gets Current Year for Copyright Tag */
+export default function Footer(): React.JSX.Element {
+    /* Gets Current Year for Copyright Tag */
     var date = new Date();
     var currYear: number = date.getFullYear();
 
