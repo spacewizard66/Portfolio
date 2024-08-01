@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 
 import Loading from './components/Loading';
 import About from './components/About';
+import Stack from './components/Stack';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Footer from './components/Footer';
@@ -19,7 +20,9 @@ export default function App(): React.JSX.Element {
     return (
         <>
             <Suspense fallback={<Loading />}>
-                <About />
+                <About>
+                    <Stack />
+                </About>
                 <Main>
                     <Projects />
                     <Certificates />

@@ -110,7 +110,7 @@ body {
 .about {
   color: $white;
   background: $black;
-  padding: 100px 0 60px 0;
+  padding: 40px 0 40px 0;
   margin: 0;
   /* font-size: 16px; */
   text-align: center;
@@ -122,39 +122,30 @@ body {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    padding: 0 20px;
 
   }
   &__title {
     margin: 0;
-    font-size: $header1;
+    font-size: 2.4rem;
     font-family:"K2D", sans-serif;
     /* letter-spacing: 2px; */
-    animation: fadeUp 200ms ease-out 400ms backwards;
+    animation: fadeUp 200ms ease-out 200ms backwards;
   }
-  &__skills {
-    margin: 0;
-    font-size: 1.2rem;
-    animation: fadeUp 200ms ease-out 400ms backwards;
-  }
-  /* &__name {
-    margin: 80px 0 20px 0;
-    font-size: $header2;
-    font-family:"K2D", sans-serif;
-    animation: fadeUp 200ms ease-out 600ms backwards;
-  } */
   &__description {
     /* width: calc(100% - 200px); */
-    padding: 0 15px;
+    padding: 20px 0;
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.6em;
     letter-spacing: -1px;
     word-spacing: 2px;
-    animation: fadeUp 200ms ease-out 600ms backwards;
+    animation: fadeUp 200ms ease-out 400ms backwards;
   }
   &__resume {
     height: 50px;
     width: 150px;
+    margin: 20px 0;
     font-size: 1.5rem;
     font-family: "Ubuntu", sans-serif;
     line-height: 50px;
@@ -165,11 +156,42 @@ body {
     border: solid 3px $blue-primary;
     text-decoration: none;
     text-align: center;
+    animation: fadeUp 200ms ease-out 600ms backwards;
     &:hover {
       color: $black;
       cursor: pointer;
       background: $blue-primary;
       box-shadow: 0 0 10px 15px $blue-shadow;
+    }
+  }
+  /* &__name {
+    margin: 80px 0 20px 0;
+    font-size: $header2;
+    font-family:"K2D", sans-serif;
+    animation: fadeUp 200ms ease-out 600ms backwards;
+  } */
+  &__skills {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 0.8rem;
+    animation: fadeUp 200ms ease-out 800ms backwards;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33%);
+    gap: 20px 0;
+  }
+  &__skill {
+    /* height: auto; */
+    /* padding: 15px 0; */
+    &__img {
+      height: 50px;
+      width: 50px;
+    }
+    &__title {
+      margin: 0;
+      /* padding: 5px 0; */
+      /* font-size: 1rem; */
     }
   }
 }
@@ -186,7 +208,7 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
-    animation: fadeUp 400ms ease 800ms backwards;
+    animation: fadeUp 200ms ease 1000ms backwards;
   }
   &__banner {
     height: 40px;
@@ -195,14 +217,16 @@ body {
     overflow: hidden;
   }
   &__title {
-    height: 140px;
+    /* height: 140px; */
     min-width: 240px;
     background: $white-background;
     display: flex;
     align-items: center;
     justify-content: center;
     &__text {
-      font-size: 2.2rem;
+      padding: 20px 0;
+      margin: 0;
+      font-size: 2.4rem;
       color: $font-color;
       font-family:"K2D", sans-serif;
       letter-spacing: 1px;
@@ -210,7 +234,7 @@ body {
   }
   &__projects {
     width: 100%;
-    padding: 0 0 40px 0;
+    padding: 0 0 80px 0;
     background-color: $white-background;
     display: flex;
     flex-direction: column;
@@ -218,13 +242,10 @@ body {
   }
   &__project {
     /* Individual Project */
-    /* height: 440px; */
-    width: 85%;
-    margin: 0 0 66px 0;
     color: $font-color;
     opacity: 0;
     border-radius: 0.8rem;
-    padding: 40px 0;
+    padding: 40px 25px;
     text-align: center;
     &__img {
       height: 200px;
@@ -232,27 +253,29 @@ body {
       max-width: 300px;
       margin: auto;
       border-radius: 0.8rem;
-      box-shadow: 0 0 20px 3px $blue-primary;
+      /* box-shadow: 0 0 20px 3px $blue-primary; */
     }
     &__info {
+      /* height: 280px; */
       min-height: 62px;
       width: 100%;
-      margin: 20px auto;
+      /* margin: 10px 0; */
+      padding: 20px 0 0 0;
       position: relative;
       text-align: center;
-      /* display: flex;
+      display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center; */
+      align-items: center;
     }
     &__title {
       font-size: 1.6rem;
-      margin: 10px 0;
+      margin: 0;
       position: relative;
       font-family:"K2D", sans-serif;
     }
     &__description {
       width: 100%;
+      /* margin: 0; */
       font-size: 1.2rem;
       line-height: 1.6rem;
       word-spacing: 2px;
@@ -260,8 +283,8 @@ body {
       vertical-align: middle;
     }
     &__button {
-      height: 4rem;
-      width: 220px;
+      height: 58px;
+      width: 200px;
       padding: 16px;
       border: none;
       border-bottom: 6px solid $blue-secondary;
@@ -288,7 +311,7 @@ body {
       animation-name: fadeIn;
       animation-duration: 600ms;
       animation-timing-function: ease-in;
-      animation-fill-mode: both;
+      animation-fill-mode: forwards;
       -webkit-animation-name: fadeIn;
       -webkit-animation-duration: 600ms;
       -moz-animation-name: fadeIn;
@@ -304,22 +327,49 @@ body {
     align-items: center;
   }
   &__certificate {
-    width: 800px;
-    /* background: $white-background; */
+    width: 85%;
+    max-width: 300px;
+    padding: 40px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* &__container {
-      width: 1000px;
-    } */
+    color: $font-color;
     &__img {
       object-fit: contain;
-      /* height: 250px; */
-      width: 800px;
+      width: 100%;
       box-shadow: 0 0 20px 5px $blue-primary;
     }
+    &__title {
+      font-size: 1.6rem;
+      font-family:"K2D", sans-serif;
+      text-align: center;
+      padding: 15px 0;
+      margin: 0;
+    }
     &__link {
-      
+      font-size: 1.2rem;
+      text-decoration: none;
+      /* color: gold;
+      background: $black; */
+      color: $font-color;
+      position: relative;
+      transition: all 200ms ease-in-out;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 3px;
+        background-color: $blue-primary;
+        transform: scaleX(0);
+        transition: transform 200ms ease-in-out;
+      }
+      &:hover {
+        /* color: $blue-primary; */
+      }
+      &:hover::before {
+        transform: scaleX(1);
+      }
     }
   }
 }
@@ -339,13 +389,14 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  &__socials { /* Social Links (Buttons) */
-      height: 40px;
-      width: 50%;
-      max-width: 260px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  &__socials {
+    /* Social Links (Buttons) */
+    height: 40px;
+    width: 50%;
+    max-width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__link { /* Icons */
       height: 40px;
@@ -407,7 +458,8 @@ body {
           }
       }
   }
-  &__copyright { /* copyright tag */
+  &__copyright {
+    /* copyright tag */
       font-family: 'Roboto Slab', sans-serif;
       font-size: 15px;
       color: #fff;
@@ -420,6 +472,100 @@ body {
 .linkedin:hover {background: #7eaedd;}
 .github {background: #333333;}
 .github:hover {background: #575757;}
+
+
+
+
+/**
+ * ^Media Queries
+ * ^For Scaling and Responsiveness
+ */
+@media only screen and (min-width: 850px) {
+  /* Desktop */
+  .about {
+    padding: 100px 0 40px 0;
+    &__container {
+      width: 1000px;
+    }
+    &__title {
+      /* margin: 0 auto; */
+      font-size: $header1;
+    }
+    &__description {
+      padding: 20px 100px;
+      font-size: 1.4rem;
+    }
+    &__skills {
+      width: 500px;
+      font-size: 1.2rem;
+
+    }
+  }
+
+  .main {
+    &__banner {
+      height: 120px;
+    }
+    &__title {
+      height: 140px;
+      &__text {
+        font-size: $header1;
+      }
+    }
+    &__projects {
+      /* padding: 0 0 120px 0; */
+    }
+    &__project {
+      height: 240px;
+      width: 100%;
+      min-width: 800px;
+      max-width: 1000px;
+      padding: 40px 0;
+      margin: 0;
+      &__img {
+        height: 100%;
+        width: 40%;
+        max-width: 400px;
+      }
+      &__info {
+        height: 100%;
+        width: 60%;
+        padding: 0;
+        margin: auto;
+        float: right;
+      }
+      &__title {
+        font-size: $header2;
+        margin: 0;
+      }
+      &__description {
+        height: 100px;
+        width: 85%;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 16px;
+      }
+    }
+    &__certificates {
+
+    }
+    &__certificate {
+      width: 600px;
+      max-width: 600px;
+      &__img {
+        width: 100%;
+      }
+      &__title {
+        font-size: $header2;
+        margin: 0;
+      }
+      &__link {
+
+      }
+    }
+  }
+}
+
 
 
 
@@ -481,86 +627,4 @@ body {
       opacity: 1;
       transform: none;
     };
-}
-
-
-
-/**
- * ^Media Queries for Scaling and Responsiveness
- */
-@media only screen and (min-width: 850px) {
-  /* Desktop */
-  .about {
-    /* width: 100%; */
-    /* min-width: 650px; */
-    /* padding: 1.5% 0 2% 0; */
-    /* margin: 0 0 2% 0; */
-    padding: 80px auto 40px auto;
-    &__container {
-      width: 1000px;
-    }
-    &__title {
-      /* margin: 0 auto; */
-    }
-    &__skills {
-      font-size: 1.3rem;
-    }
-    /* &__name {
-      margin: 120px 0 20px 0;
-    } */
-    &__description {
-      /* width: 28%;
-      min-width: 800px; */
-      padding: 25px 100px;
-      font-size: 1.4rem;
-    }
-  }
-
-  .main {
-    &__banner {
-      height: 120px;
-    }
-    &__title {
-      height: 140px;
-      &__text {
-        font-size: $header1;
-      }
-    }
-    &__projects {
-      /* padding: 0 0 120px 0; */
-    }
-    &__project {
-      height: 240px;
-      width: 100%;
-      min-width: 800px;
-      max-width: 1000px;
-      margin: 0;
-      &__img {
-        height: 100%;
-        width: 40%;
-        max-width: 400px;
-      }
-      &__info {
-        height: 100%;
-        width: 60%;
-        margin: auto;
-        float: right;
-      }
-      &__title {
-        font-size: $header2;
-        margin: 0;
-      }
-      &__description {
-        height: 100px;
-        width: 80%;
-        font-size: 1.2rem;
-        margin: auto;
-        padding: 16px;
-      }
-      &__button {
-        height: 58px;
-        width: 288px;
-      }
-    }
-  }
 }

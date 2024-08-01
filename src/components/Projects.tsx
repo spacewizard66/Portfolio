@@ -69,7 +69,7 @@ export default function Projects(): React.JSX.Element {
     // Declaring options for useInView() hook
     const options: {triggerOnce: boolean, threshold: number} = {
         triggerOnce: true,
-        threshold: 0.1
+        threshold: 0.3
     }
 
     // useInView hooks that returns a boolean (true, false) if in viewport
@@ -142,8 +142,8 @@ export default function Projects(): React.JSX.Element {
     };
 
     return (
-        <>
+        <section className="main__projects">
             {allProjects}
-        </>
+        </section>
     );
 };

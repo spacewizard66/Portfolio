@@ -21,13 +21,13 @@ export default function Certificates(): React.JSX.Element {
             "image": cert3,
             "title": "Meta Front-End Specialization",
             "url": "https://www.coursera.org/verify/professional-cert/6MTWJRUQAUZQ",
-            "button": "Verify"
+            "button": "---------> Verify Here <---------"
         },
         "certificate2" : {
             "image": cert2,
             "title": "Scientific Computing with Python",
             "url": "https://www.freecodecamp.org/certification/masongalat/scientific-computing-with-python-v7",
-            "button": "Verify"
+            "button": "---------> Verify Here <---------"
         },
         "certificate1" : {
             "image": cert1,
@@ -44,23 +44,30 @@ export default function Certificates(): React.JSX.Element {
     // then pushes each project JSX to the 'allCerts' array
     for (let cert in info) {
         allCerts.push(
-            <div className="main__certificate">
+            <div className="main__certificate" key={cert}>
                 <img
                     className="main__certificate__img"
                     key={`${cert}-image`}
                     src={info[cert].image}
                     alt=""
                 ></img>
-                <a className="main__certificate__link">
-                    Verify Here
+                <h3 className="main__certificate__title">
+                    {info[cert].title}
+                </h3>
+                <a
+                    className="main__certificate__link"
+                    href={info[cert].url}
+                    target="_blank"
+                >
+                    {info[cert].button}
                 </a>
             </div>
         )
     }
 
     return (
-        <>
+        <section className="main__certificates">
             {allCerts}
-        </>
+        </section>
     );
 };
