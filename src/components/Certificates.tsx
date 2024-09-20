@@ -1,7 +1,7 @@
 import React from 'react';
 
 import cert3 from '../../public/img/certificates/Meta.png';
-import cert2 from '../../public/img/certificates/Freecodecamp.png';
+import cert2 from '../../public/img/certificates/Freecodecamp';
 import cert1 from '../../public/img/certificates/Cisco.png';
 
 export default function Certificates(): React.JSX.Element {
