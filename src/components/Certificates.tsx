@@ -21,13 +21,13 @@ export default function Certificates(): React.JSX.Element {
             "image": cert3,
             "title": "Meta Front-End Specialization",
             "url": "https://www.coursera.org/verify/professional-cert/6MTWJRUQAUZQ",
-            "button": "---------> Verify Here <---------"
+            "button": "------> Verify Here <------"
         },
         "certificate2" : {
             "image": cert2,
             "title": "Scientific Computing with Python",
             "url": "https://www.freecodecamp.org/certification/masongalat/scientific-computing-with-python-v7",
-            "button": "---------> Verify Here <---------"
+            "button": "------> Verify Here <------"
         },
         "certificate1" : {
             "image": cert1,

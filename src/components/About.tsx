@@ -22,6 +22,7 @@ export default function About(props: {children: React.JSX.Element}): React.JSX.E
                     className="about__resume"
                     href={resume}
                     target="_blank"
+                    title="Mason's Resume"
                     >
                     Resume
                 </a>

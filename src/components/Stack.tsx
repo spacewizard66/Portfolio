@@ -82,10 +82,9 @@ export default function Stack(): React.JSX.Element {
     let index: number = 0;
     for (let skill in info) {
         allSkills.push(
-            <div className="about__skill">
+            <div className="about__skill" key={skill}>
                 <img
                     className="about__skill__img"
-                    key={`${skill}-image`}
                     src={info[skill].image}
                     alt=""
                 >

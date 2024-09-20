@@ -7,6 +7,71 @@ export default function Footer(): React.JSX.Element {
 
     return (
         <footer className="footer">
+            <section className="footer__credits">
+                <div className="footer__credits__container">
+                    <p className="footer__credits__title">
+                        Credits
+                    </p>
+                    <hr className="footer__credits__row"/>
+                    <a
+                        href="https://compressor.io/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        compressor.io
+                    </a>
+                    <a
+                        href="https://ezgif.com/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        ezgif.com
+                    </a>
+                    <a
+                        href="https://favicon.io/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        favicon.io
+                    </a>
+                    <a
+                        href="https://app.flowcv.com/dashboard"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        flowcv.io
+                    </a>
+                    <a
+                        href="https://fontawesome.com/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        fontawesome.com
+                    </a>
+                    <a
+                        href="https://www.freeconvert.com/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        freeconvert.com
+                    </a>
+                    <a
+                        href="https://getwaves.io/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        getwaves.io
+                    </a>
+                    <a
+                        href="https://icons8.com/icons/"
+                        className="footer__credits__link"
+                        target="_blank"
+                    >
+                        icons8.com
+                    </a>
+                </div>
+            </section>
+            <hr className="footer__row"/>
             <section className="footer__socials">
                 <a className="footer__link email" href="mailto:mason4work@outlook.com?subject=Portfolio" target="_blank" rel="noreferrer">
                     <span>Email</span>

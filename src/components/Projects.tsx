@@ -24,43 +24,43 @@ export default function Projects(): React.JSX.Element {
     const info: Project = {
         "project6" : {
             "image": image6,
-            "title": "Eckenrode's Septic Cleaning",
-            "description": "A SPA landing page for a local septic company. Utilizes SEO, REST APIs, responsive design, cloud hosting, and a custom domain. Technologies used include JavaScript, React, SCSS, Webpack, Render, and Git.",
+            "title": "Eckenrode's Septic",
+            "description": "A landing page for a local septic cleaning and repairing company. Utilizes SEO, REST APIs, responsive design, cloud hosting, and a custom domain. Technologies used include JavaScript, React, SCSS, Webpack, Render, and Git.",
             "url": "https://www.eckenrodesepticllc.com/",
-            "button": "Live Site"
+            "button": "View Site"
         },
         "project5": {
             "image": image5,
             "title": "Super Swing Baseball",
-            "description": "A SPA landing page for a local company that proudly offers baseball lessons to youth. Technologies used include JavaScript, React, SCSS, Render, and Git.",
-            "url": "https://www.super-swing-baseball.onrender.com/",
-            "button": "Live Site"
+            "description": "A landing page for a local company that proudly offers baseball lessons to youth. Technologies used include JavaScript, React, SCSS, Render, and Git.",
+            "url": "https://super-swing-baseball.onrender.com/",
+            "button": "View Site"
         },
         "project3": {
             "image": image3,
             "title": "PassPal",
             "description": "PassPal is a clean and simple application that lets you generate a unique and complex password, perfect for real world use and solid security. Created using vanilla JavaScript and SCSS.",
             "url": "https://password-generator-vti7.onrender.com",
-            "button": "Live Site"
+            "button": "View Site"
         },
         "project4": {
             "image": image4,
             "title": "Weather App",
             "description": "A weather forecast application to retrieve current forecast data of a specified area. Built with JavaScript, React, CSS, Render, and OpenWeather's REST API.",
             "url": "https://weather-forecast-0ce3.onrender.com/",
-            "button": "Live Site"
+            "button": "View Site"
         },
         "project2": {
             "image": image2,
             "title": "Alien Invasion",
-            "description": "Space Invaders clone game that is developed with Python & Pygame",
+            "description": "A Space Invaders clone game developed with Python & Pygame. Structured using object-oriented programming principles.",
             "url": "https://github.com/spacewizard66/Alien-Invasion",
             "button": "View Github"
         },
         "project1": {
             "image": image1,
             "title": "Tic Tac Toe",
-            "description": "Fun, 2-player game integrated using Python & Pygame",
+            "description": "Fun, 2-player game integrated using Python & Pygame. This showcases a responsive and engaging user interface.",
             "url": "https://github.com/spacewizard66/TicTacToe",
             "button": "View Github"
         }
@@ -143,7 +143,9 @@ export default function Projects(): React.JSX.Element {
 
     return (
         <section className="main__projects">
-            {allProjects}
+            <div className="main__projects__container">
+                {allProjects}
+            </div>
         </section>
     );
 };
