@@ -4,6 +4,7 @@ My personal portfolio website. The project showcases my skills, experience, and 
 
 
 ## Project Structure
+```
 .
 ├── public/               # Static assets (favicon, images)
 │
@@ -18,3 +19,4 @@ My personal portfolio website. The project showcases my skills, experience, and 
 ├── README.md             # Documentation
 ├── tsconfig.json         # TypeScript configuration
 └── webpack.config.js     # Webpack configuration
+```
