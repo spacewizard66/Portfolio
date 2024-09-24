@@ -7,7 +7,6 @@ export default function About(props: {children: React.JSX.Element}): React.JSX.E
         <section className="about">
             <div className="about__container">
                 <h1 className="about__title">Hi, I'm Mason</h1>
-                {/* <h2 className="about__name">Hi, I'm Mason.</h2> */}
                 <p className="about__description">
                     A motivated web developer with an eagerness to
                     create smooth, appealing websites.

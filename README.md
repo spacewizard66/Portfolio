@@ -20,3 +20,21 @@ My personal portfolio website. The project showcases my skills, experience, and 
 ├── tsconfig.json         # TypeScript configuration
 └── webpack.config.js     # Webpack configuration
 ```
+
+
+## Installation
+<!-- start:code block -->
+# Clone this repository
+git clone https://github.com/spacewizard66/Portfolio
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Run the app
+npm start
+
+# Open http://localhost:3000 in your browser
+open http://localhost:3000
+<!-- end:code block -->
+

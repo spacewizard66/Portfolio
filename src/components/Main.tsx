@@ -11,7 +11,7 @@ export default function Home(props: {children: React.JSX.Element[]}): React.JSX.
 					<h2 className="main__title__text">Projects</h2>
 				</div>
 				{props.children[0]}
-				<div className="main__title">
+				<div className="main__title main__title--2">
 					<h2 className="main__title__text">Certifications</h2>
 				</div>
 				{props.children[1]}

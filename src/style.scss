@@ -303,6 +303,10 @@ body {
       -o-animation-duration: 600ms;
     }
   }
+  &__title--2 {
+    border-top: 2px solid rgb(220, 220, 220);
+    padding: 40px 0 0 0;
+  }
   &__certificates {
     background: $white-background;
     display: flex;
