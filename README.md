@@ -23,7 +23,7 @@ My personal portfolio website. The project showcases my skills, experience, and 
 
 
 ## Installation
-<!-- start:code block -->
+```
 # Clone this repository
 git clone https://github.com/spacewizard66/Portfolio
 cd Portfolio
@@ -36,5 +36,5 @@ npm start
 
 # Open http://localhost:3000 in your browser
 open http://localhost:3000
-<!-- end:code block -->
+```
 
