@@ -130,8 +130,8 @@ body {
     max-width: 500px;
     padding: 20px 0;
     margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.6em;
+    font-size: 1.0rem;
+    line-height: 1.5em;
     letter-spacing: -1px;
     word-spacing: 2px;
     animation: fadeUp 200ms ease-out 300ms backwards;
@@ -168,7 +168,7 @@ body {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33%);
     gap: 20px 0;
-    animation: fadeUp 200ms ease-out 500ms backwards;
+    animation: fadeUp 200ms ease-out 700ms backwards;
   }
   &__skill {
     &__img {
@@ -180,10 +180,10 @@ body {
     }
   }
   &__canvas {
-    /* height: 100px; */
     width: 100%;
     max-width: 600px;
     aspect-ratio: 4 / 1;
+    animation: fadeUp 200ms ease 1000ms backwards;
   }
 }
 
@@ -199,7 +199,7 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
-    animation: fadeUp 200ms ease 750ms backwards;
+    animation: fadeUp 200ms ease 1300ms backwards;
   }
   &__banner {
     height: 40px;

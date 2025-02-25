@@ -6,7 +6,7 @@ export default function Sprite() {
     let canvasRef = useRef(null);
 
     useEffect(() => {
-        let canvas = canvasRef.current; // Get Canvas Element
+        let canvas: any = canvasRef.current; // Get Canvas Element
         let ctx = canvas.getContext("2d"); // 2D Context
 
         let img = new Image();
@@ -34,7 +34,7 @@ export default function Sprite() {
 
 
         // Function to Help Draw Frames
-        function drawFrame(frameX, frameY, canvasX, canvasY) {
+        function drawFrame(frameX: number, frameY: number, canvasX: number, canvasY: number) {
             ctx.drawImage(
                 img,
 
@@ -53,7 +53,7 @@ export default function Sprite() {
 
         // currentAnimation: 0
         // Walk in Right Direction Animation
-        function walkLeft(s, d) {
+        function walkLeft(s: number, d: number) {
             cycleLoop = [0, 1, 0, 2]; // Specific Loop Cycle
             currentAnimation = 0;
 
@@ -78,7 +78,7 @@ export default function Sprite() {
 
         // currentAnimation: 1
         // Walk in Right Direction Animation
-        function walkRight(s, d) {
+        function walkRight(s: number, d: number) {
             cycleLoop = [0, 1, 0, 2]; // Specific Loop Cycle
             currentAnimation = 1;
 
