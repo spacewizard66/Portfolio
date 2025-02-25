@@ -107,7 +107,7 @@ body {
  * ^About Section
  */
 .about {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   margin: 0;
   text-align: center;
   color: $white;
@@ -178,6 +178,12 @@ body {
     &__title {
       margin: 0;
     }
+  }
+  &__canvas {
+    /* height: 100px; */
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 1;
   }
 }
 
@@ -500,7 +506,7 @@ body {
 @media only screen and (min-width: 850px) {
   /* Desktop */
   .about {
-    padding: 100px 0 40px 0;
+    padding: 100px 0 0 0;
     &__container {
       max-width: 1000px;
     }
@@ -514,6 +520,10 @@ body {
     }
     &__skills {
       font-size: 1.2rem;
+    }
+    &__canvas {
+      height: 150px;
+      width: 600px;
     }
   }
 

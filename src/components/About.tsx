@@ -2,7 +2,7 @@ import React from 'react';
 
 import resume from '../../public/img/Mason_Galat_Resume.pdf';
 
-export default function About(props: {children: React.JSX.Element}): React.JSX.Element {
+export default function About(props: {children: React.JSX.Element[]}): React.JSX.Element {
     return (
         <section className="about">
             <div className="about__container">
@@ -25,7 +25,8 @@ export default function About(props: {children: React.JSX.Element}): React.JSX.E
                     >
                     Resume
                 </a>
-                {props.children}
+                {props.children[0]}
+                {props.children[1]}
             </div>
         </section>
     );
