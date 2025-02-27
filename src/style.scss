@@ -124,7 +124,7 @@ body {
     margin: 0;
     font-size: 2.4rem;
     font-family:"K2D", sans-serif;
-    animation: fadeUp 300ms ease-out 300ms backwards;
+    animation: fadeUp 300ms ease-out 200ms backwards;
   }
   &__description {
     max-width: 500px;
@@ -134,13 +134,13 @@ body {
     line-height: 1.5em;
     letter-spacing: -1px;
     word-spacing: 2px;
-    animation: fadeUp 300ms ease-out 600ms backwards;
+    animation: fadeUp 300ms ease-out 400ms backwards;
   }
   &__canvas {
     width: 100%;
     max-width: 600px;
     aspect-ratio: 4 / 1;
-    animation: fadeUp 300ms ease 900ms backwards;
+    animation: fadeUp 300ms ease 600ms backwards;
   }
   &__resume {
     height: 50px;
@@ -156,7 +156,7 @@ body {
     border: solid 3px $blue-primary;
     text-decoration: none;
     text-align: center;
-    animation: fadeUp 300ms ease-out 1100ms backwards;
+    animation: fadeUp 300ms ease-out 700ms backwards;
     &:hover {
       color: $white;
       cursor: pointer;
@@ -174,7 +174,7 @@ body {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33%);
     gap: 20px 0;
-    animation: fadeUp 300ms ease-out 1300ms backwards;
+    animation: fadeUp 300ms ease-out 800ms backwards;
   }
   &__skill {
     &__img {
@@ -199,7 +199,7 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
-    animation: fadeUp 300ms ease 1400ms backwards;
+    animation: fadeUp 300ms ease 900ms backwards;
   }
   &__banner {
     height: 40px;
