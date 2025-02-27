@@ -22,8 +22,8 @@ export default function App(): React.JSX.Element {
         <>
             <Suspense fallback={<Loading />}>
                 <About>
-                    <Stack />
                     <Sprite />
+                    <Stack />
                 </About>
                 <Main>
                     <Projects />

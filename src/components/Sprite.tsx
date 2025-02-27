@@ -17,7 +17,7 @@ export default function Sprite() {
         const width = 320;
         const height = 320;
 
-        let canvasX = canvas.width / 2 - 40; // Starts sprite at center of canvas
+        let canvasX = canvas.width / 2 - 30; // Starts sprite at center of canvas
         let canvasY = canvas.height - (height*scale); // Bottom of canvas
 
         const scaledWidth = scale * width / 2;
@@ -188,9 +188,9 @@ export default function Sprite() {
 
             let roll = randomInt(0, 2); // Chance for "blink" animation to occur
             if (roll == 1) {
-                setTimeout(blink, 1000);
+                setTimeout(blink, 800);
             }
-            setTimeout(init, 2000);
+            setTimeout(init, 1600);
             return;
         }
 
@@ -243,11 +243,11 @@ export default function Sprite() {
                 } else if (roll_1 == 4) {
                     if (roll_2 == 1) {
                         let startingLocation = canvasX; // Grabs current location of sprite
-                        let destination = randomInt(30, canvas.width / 4);
+                        let destination = randomInt(30, canvas.width / 5);
                         walkLeft(startingLocation, destination);
                     } else {
-                        let startingLocation = canvasX + width * scale * 0.5; // Grabs current location of sprite
-                        let destination = randomInt(30, canvas.width / 4);
+                        let startingLocation = canvasX + width * scale * 0.5; // Grabs current location of sprite (right edge)
+                        let destination = randomInt(30, canvas.width / 5);
                         walkRight(startingLocation, destination);
                     }
                 }

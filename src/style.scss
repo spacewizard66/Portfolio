@@ -124,17 +124,23 @@ body {
     margin: 0;
     font-size: 2.4rem;
     font-family:"K2D", sans-serif;
-    animation: fadeUp 200ms ease-out 200ms backwards;
+    animation: fadeUp 300ms ease-out 300ms backwards;
   }
   &__description {
     max-width: 500px;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     margin: 0;
     font-size: 1.0rem;
     line-height: 1.5em;
     letter-spacing: -1px;
     word-spacing: 2px;
-    animation: fadeUp 200ms ease-out 300ms backwards;
+    animation: fadeUp 300ms ease-out 600ms backwards;
+  }
+  &__canvas {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 1;
+    animation: fadeUp 300ms ease 900ms backwards;
   }
   &__resume {
     height: 50px;
@@ -150,7 +156,7 @@ body {
     border: solid 3px $blue-primary;
     text-decoration: none;
     text-align: center;
-    animation: fadeUp 200ms ease-out 400ms backwards;
+    animation: fadeUp 300ms ease-out 1100ms backwards;
     &:hover {
       color: $white;
       cursor: pointer;
@@ -160,7 +166,7 @@ body {
   }
   &__skills {
     width: 100%;
-    max-width: 500px;
+    max-width: 330px;
     padding: 20px 0;
     margin: 0;
     font-size: 0.8rem;
@@ -168,22 +174,16 @@ body {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33%);
     gap: 20px 0;
-    animation: fadeUp 200ms ease-out 700ms backwards;
+    animation: fadeUp 300ms ease-out 1300ms backwards;
   }
   &__skill {
     &__img {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
     }
     &__title {
       margin: 0;
     }
-  }
-  &__canvas {
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 4 / 1;
-    animation: fadeUp 200ms ease 1000ms backwards;
   }
 }
 
@@ -199,7 +199,7 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
-    animation: fadeUp 200ms ease 1300ms backwards;
+    animation: fadeUp 300ms ease 1400ms backwards;
   }
   &__banner {
     height: 40px;
@@ -327,8 +327,10 @@ body {
     align-items: center;
     color: $font-color;
     &__img {
-      object-fit: contain;
+      /* object-fit: contain; */
+      /* height: 220px; */
       width: 100%;
+      aspect-ratio: 7 / 5;
       box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
     }
     &__title {
@@ -514,12 +516,14 @@ body {
       font-size: $header1;
     }
     &__description {
-      max-width: 100%;
-      padding: 20px 100px;
-      font-size: 1.4rem;
+      width: 100%;
+      max-width: 700px;
+      padding: 20px 100px 0 100px;
+      font-size: 1.2rem;
     }
     &__skills {
-      font-size: 1.2rem;
+      font-size: 1.0rem;
+      max-width: 450px;
     }
     &__canvas {
       height: 150px;
@@ -576,14 +580,26 @@ body {
     }
     &__certificates {
       padding: 0 0 40px 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(200px, 300px));
+      grid-template-rows: repeat(2, 50%);
+      justify-content: center;
     }
     &__certificate {
-      width: 600px;
+      width: 100%;
+      min-width: 400px;
       max-width: 600px;
+      padding-left: 0;
+      padding-right: 0;
+      grid-column: span 2;
+      &:last-child:nth-child(odd) {
+        grid-column-end: -2;
+      }
       &__img {
-        width: 100%;
+        width: 80%;
       }
       &__title {
+        width: 380px;
         font-size: $header2;
         margin: 0;
       }
@@ -626,7 +642,7 @@ body {
 @keyframes fadeUp {
   from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     };
   to {
       opacity: 1;
@@ -636,7 +652,7 @@ body {
 @-webkit-keyframes fadeUp {
   from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     };
   to {
       opacity: 1;
